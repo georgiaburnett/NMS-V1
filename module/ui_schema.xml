@@ -291,7 +291,7 @@
         </select1>
       </group>
       <group ref="Search" faims_scrollable="false">
-        <label>{search}</label>
+        <label>{Records}</label>
         <group faims_style="orientation" ref="Colgroup_0">
           <label/>
           <group faims_style="even" ref="Col_0">
@@ -341,35 +341,30 @@
           <group ref="Col_0" faims_style="even">
             <label/>
             <input faims_attribute_type="measure" ref="StartTimestamp" faims_attribute_name="StartTimestamp">
-              <label>{StartTimestamp}</label>
-              <!--WARNING: No type t was given for this view; assuming it is an input-->
+              <label>{Start_Timestamp}</label>
             </input>
           </group>
           <group ref="Col_1" faims_style="even">
             <label/>
             <trigger ref="StartTimestampTrigger">
-              <label>{StartTimestampTrigger}</label>
+              <label>{Record_Start_Timestamp}</label>
             </trigger>
           </group>
         </group>
         <input faims_attribute_type="measure" ref="Transect_ID" faims_attribute_name="Transect ID" faims_style_class="required">
           <label>{Transect_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Planet_Name" faims_attribute_name="Planet Name" faims_style_class="required">
           <label>{Planet_Name}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input ref="author" faims_attribute_name="Transect author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
-          <label>{author}</label>
+          <label>{Surveyor}</label>
         </input>
         <input faims_attribute_type="measure" ref="Geotag" faims_attribute_name="Geotag" faims_style_class="required">
           <label>{Geotag}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Number_Of_Orbits" faims_attribute_name="Number Of Orbits">
           <label>{Number_Of_Orbits}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select1 faims_attribute_type="vocab" ref="Survey_Method" faims_attribute_name="Survey Method" faims_style_class="required">
           <label>{Survey_Method}</label>
@@ -387,22 +382,18 @@
         </select1>
         <input faims_attribute_type="measure" ref="Number_of_Features" faims_attribute_name="Number of Features">
           <label>{Number_of_Features}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Location_and_description" faims_attribute_name="Location and description">
           <label>{Location_and_description}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
       <group ref="Survey_Procedure">
         <label>{Survey_Procedure}</label>
         <input faims_attribute_type="measure" ref="Area_Surveyed" faims_attribute_name="Area Surveyed">
-          <label>{Area_Surveyed}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{Area_Surveyed__sq__km__}</label>
         </input>
         <input faims_attribute_type="measure" ref="Bearing" faims_attribute_name="Bearing">
-          <label>{Bearing}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{Bearing__degrees_}</label>
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
           <label/>
@@ -429,15 +420,12 @@
         </group>
         <input faims_attribute_type="measure" ref="Comment_on_transect" faims_attribute_name="Comment on transect">
           <label>{Comment_on_transect}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Video_Capture_URL" faims_attribute_name="Video Capture URL" faims_style_class="required">
           <label>{Video_Capture_URL}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Screengrab_Filename" faims_attribute_name="Screengrab Filename">
           <label>{Screengrab_Filename}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select type="file" faims_attribute_type="measure" faims_sync="true" ref="Attach_a_Screengrab" faims_attribute_name="Attach a Screengrab">
           <label>{Attach_a_Screengrab}</label>
@@ -473,55 +461,48 @@
           </item>
         </select>
         <input faims_attribute_type="measure" ref="Dominant_Planet_Coverage_Other" faims_attribute_name="Dominant Planet Coverage Other">
-          <label>{Dominant_Planet_Coverage_Other}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{If_dominant_planet_coverage_is__other___please_explain_}</label>
         </input>
         <input faims_attribute_type="measure" ref="Percentage_of_Visable_Surface" faims_attribute_name="Percentage of Visable Surface">
           <label>{Percentage_of_Visable_Surface}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Comment_on_planetary_coverage" faims_attribute_name="Comment on planetary coverage">
           <label>{Comment_on_planetary_coverage}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
       <group ref="Surface_Conditions">
         <label>{Surface_Conditions}</label>
         <input faims_attribute_type="measure" ref="Comment_on_surface_conditions" faims_attribute_name="Comment on surface conditions">
           <label>{Comment_on_surface_conditions}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Features" faims_attribute_name="Features">
           <label>{Features}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
       <group ref="Revisit">
         <label>{Revisit}</label>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Revisit" faims_attribute_name="Revisit" faims_style_class="required">
-          <label>{Revisit}</label>
+          <label>{Revisit_}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
         <input faims_attribute_type="measure" ref="Revisit_Reason" faims_attribute_name="Revisit Reason">
-          <label>{Revisit_Reason}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{If_yes__explain_briefly_}</label>
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
           <label/>
           <group ref="Col_0" faims_style="even">
             <label/>
             <input faims_attribute_type="measure" ref="EndTimestamp" faims_attribute_name="EndTimestamp">
-              <label>{EndTimestamp}</label>
-              <!--WARNING: No type t was given for this view; assuming it is an input-->
+              <label>{End_Timestamp}</label>
             </input>
           </group>
           <group ref="Col_1" faims_style="even">
             <label/>
             <trigger ref="EndTimestampTrigger">
-              <label>{EndTimestampTrigger}</label>
+              <label>{Record_End_Timestamp}</label>
             </trigger>
           </group>
         </group>
@@ -552,47 +533,36 @@
         <label>{Orbit}</label>
         <input faims_attribute_type="measure" ref="Orbit_Number" faims_attribute_name="Orbit Number" faims_style_class="required">
           <label>{Orbit_Number}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Agriculture" faims_attribute_name="Agriculture">
           <label>{Agriculture}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Architecture" faims_attribute_name="Architecture">
           <label>{Architecture}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Communications" faims_attribute_name="Communications">
           <label>{Communications}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Cultural" faims_attribute_name="Cultural">
           <label>{Cultural}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Industry" faims_attribute_name="Industry">
           <label>{Industry}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Military" faims_attribute_name="Military">
           <label>{Military}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Mining" faims_attribute_name="Mining">
           <label>{Mining}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Transport" faims_attribute_name="Transport">
           <label>{Transport}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Settlement" faims_attribute_name="Settlement">
           <label>{Settlement}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Other" faims_attribute_name="Other">
           <label>{Other}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
     </group>
@@ -602,38 +572,33 @@
         <label>{General_Information}</label>
         <input faims_attribute_type="measure" ref="Unit_ID" faims_attribute_name="Unit ID" faims_style_class="required">
           <label>{Unit_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
           <label/>
           <group ref="Col_0" faims_style="even">
             <label/>
             <input faims_attribute_type="measure" ref="StartTimestamp" faims_attribute_name="StartTimestamp">
-              <label>{StartTimestamp}</label>
-              <!--WARNING: No type t was given for this view; assuming it is an input-->
+              <label>{Start_Timestamp}</label>
             </input>
           </group>
           <group ref="Col_1" faims_style="even">
             <label/>
             <trigger ref="StartTimestampTrigger">
-              <label>{StartTimestampTrigger}</label>
+              <label>{Record_Start_Timestamp}</label>
             </trigger>
           </group>
         </group>
         <input faims_attribute_type="measure" ref="Parent_Transect_ID" faims_attribute_name="Parent Transect ID">
           <label>{Parent_Transect_ID}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Parent_Planet_Name" faims_attribute_name="Parent Planet Name">
           <label>{Parent_Planet_Name}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input ref="author" faims_attribute_name="Unit author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
-          <label>{author}</label>
+          <label>{Surveyor}</label>
         </input>
         <input faims_attribute_type="measure" ref="Geotag_Unit" faims_attribute_name="Geotag Unit" faims_style_class="required">
-          <label>{Geotag_Unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{Geotag}</label>
         </input>
         <select1 faims_attribute_type="vocab" ref="Survey_Procedure_Unit" faims_attribute_name="Survey Procedure Unit">
           <label>{Survey_Procedure_Unit}</label>
@@ -643,37 +608,33 @@
           </item>
         </select1>
         <select1 faims_attribute_type="vocab" ref="Survey_State_Unit" faims_attribute_name="Survey State Unit" faims_style_class="required">
-          <label>{Survey_State_Unit}</label>
+          <label>{Is_the_area___}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
         <input faims_attribute_type="measure" ref="Number_of_Items_Unit" faims_attribute_name="Number of Items Unit">
-          <label>{Number_of_Items_Unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{Number_of_Items}</label>
         </input>
         <input faims_attribute_type="measure" ref="Location_and_description_Unit" faims_attribute_name="Location and description Unit">
-          <label>{Location_and_description_Unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{Location_and_Description}</label>
         </input>
       </group>
       <group ref="Survey_Procedure">
         <label>{Survey_Procedure}</label>
         <input faims_attribute_type="measure" ref="Area_Surveyed_Unit" faims_attribute_name="Area Surveyed Unit">
-          <label>{Area_Surveyed_Unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{Area_Surveyed__sq__km__}</label>
         </input>
         <input faims_attribute_type="measure" ref="Bearing_Unit" faims_attribute_name="Bearing Unit">
-          <label>{Bearing_Unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{Bearing__degrees_}</label>
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
           <label/>
           <group ref="Col_0" faims_style="even">
             <label/>
             <select1 faims_attribute_type="vocab" ref="From_Direction_Unit" faims_attribute_name="From Direction Unit">
-              <label>{From_Direction_Unit}</label>
+              <label>{From_Direction}</label>
               <item>
                 <label>Options not loaded</label>
                 <value>0</value>
@@ -683,7 +644,7 @@
           <group ref="Col_1" faims_style="even">
             <label/>
             <select1 faims_attribute_type="vocab" ref="To_Direction_Unit" faims_attribute_name="To Direction Unit">
-              <label>{To_Direction_Unit}</label>
+              <label>{To_Direction}</label>
               <item>
                 <label>Options not loaded</label>
                 <value>0</value>
@@ -693,15 +654,12 @@
         </group>
         <input faims_attribute_type="measure" ref="Comment_on_unit" faims_attribute_name="Comment on unit">
           <label>{Comment_on_unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Video_Capture_URL" faims_attribute_name="Video Capture URL" faims_style_class="required">
           <label>{Video_Capture_URL}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Screengrab_Filename" faims_attribute_name="Screengrab Filename">
           <label>{Screengrab_Filename}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select type="file" faims_attribute_type="measure" faims_sync="true" ref="Attach_a_Screengrab" faims_attribute_name="Attach a Screengrab">
           <label>{Attach_a_Screengrab}</label>
@@ -730,15 +688,14 @@
       <group ref="Vegetation_and_Land_Use">
         <label>{Vegetation_and_Land_Use}</label>
         <select faims_attribute_type="vocab" ref="Dominant_Vegetation_Land_Use" faims_attribute_name="Dominant Vegetation Land Use">
-          <label>{Dominant_Vegetation_Land_Use}</label>
+          <label>{Dominant_vegetation_and_land_use_}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select>
         <input faims_attribute_type="measure" ref="Dominant_Vegetation_Land_Use_Other" faims_attribute_name="Dominant Vegetation Land Use Other">
-          <label>{Dominant_Vegetation_Land_Use_Other}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{If_vegetation_or_land_use_is__other___please_explain_}</label>
         </input>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Dominant_Vegetation_Height" faims_attribute_name="Dominant Vegetation Height">
           <label>{Dominant_Vegetation_Height}</label>
@@ -748,7 +705,7 @@
           </item>
         </select1>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Surface_Visibility" faims_attribute_name="Surface Visibility" faims_style_class="required">
-          <label>{Surface_Visibility}</label>
+          <label>{Surface_Visibility____}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -756,7 +713,6 @@
         </select1>
         <input faims_attribute_type="measure" ref="Comment_on_vegetation_and_land_use" faims_attribute_name="Comment on vegetation and land use">
           <label>{Comment_on_vegetation_and_land_use}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
       <group ref="Field_Conditions">
@@ -798,47 +754,41 @@
         </select1>
         <input faims_attribute_type="measure" ref="Soil_Tint" faims_attribute_name="Soil Tint">
           <label>{Soil_Tint}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Soil_Hue" faims_attribute_name="Soil Hue">
           <label>{Soil_Hue}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Comment_on_field_conditions" faims_attribute_name="Comment on field conditions">
           <label>{Comment_on_field_conditions}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Features_Unit" faims_attribute_name="Features Unit">
           <label>{Features_Unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
       <group ref="Revisit_Unit">
         <label>{Revisit_Unit}</label>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Revisit_Unit" faims_attribute_name="Revisit Unit" faims_style_class="required">
-          <label>{Revisit_Unit}</label>
+          <label>{Revisit_}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
         <input faims_attribute_type="measure" ref="Revisit_Reason_Unit" faims_attribute_name="Revisit Reason Unit">
-          <label>{Revisit_Reason_Unit}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
+          <label>{If_yes__explain_briefly_}</label>
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
           <label/>
           <group ref="Col_0" faims_style="even">
             <label/>
             <input faims_attribute_type="measure" ref="EndTimestamp" faims_attribute_name="EndTimestamp">
-              <label>{EndTimestamp}</label>
-              <!--WARNING: No type t was given for this view; assuming it is an input-->
+              <label>{End_Timestamp}</label>
             </input>
           </group>
           <group ref="Col_1" faims_style="even">
             <label/>
             <trigger ref="EndTimestampTrigger">
-              <label>{EndTimestampTrigger}</label>
+              <label>{Record_End_Timestamp}</label>
             </trigger>
           </group>
         </group>
@@ -853,43 +803,33 @@
         <label>{Row}</label>
         <input faims_attribute_type="measure" ref="Row_Number" faims_attribute_name="Row Number" faims_style_class="required">
           <label>{Row_Number}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Metal" faims_attribute_name="Metal">
           <label>{Metal}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Sherd" faims_attribute_name="Sherd">
           <label>{Sherd}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Lithic" faims_attribute_name="Lithic">
           <label>{Lithic}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Technology" faims_attribute_name="Technology">
           <label>{Technology}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Structure" faims_attribute_name="Structure">
           <label>{Structure}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Wreck" faims_attribute_name="Wreck">
           <label>{Wreck}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Monolith" faims_attribute_name="Monolith">
           <label>{Monolith}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Settlement" faims_attribute_name="Settlement">
           <label>{Settlement}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Other" faims_attribute_name="Other">
           <label>{Other}</label>
-          <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
     </group>
