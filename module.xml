@@ -12,21 +12,38 @@
 <Control f="nodata">
   <Main>
     <New_Transect t="button" l="Transect"/>
-    <autonum/>
+    <RecentEntities t="list"/>
     <!-- GET RID OF NEXT IDS? -->
   </Main>
   <search>
     Records
     <!-- DISPLAY (RECENT?) RECORDS AS TRANSECT [ID]-UNIT [ID]-PLANET NAME -->
   </search>
+  <Identifiers>
+    <autonum/>
+  </Identifiers>  
 </Control>
 
 <Transect>
   <General_Information>
+    <cols>
+      <StartTimestamp/>
+      <StartTimestampTrigger t="button"/>
+    </cols>
     <!-- PUT START TRANSECT TIMESTAMP HERE-->
     <!-- PUT END TRANSECT TIMESTAMP HERE -->
-    <Transect_ID f="id autonum notnull"/>
-    <Planet_Name f="notnull"/>
+    <Transect_ID f="id autonum notnull">
+      <str>
+        <pos>1</pos>
+        <fmt>Transect $2</fmt>
+      </str>
+    </Transect_ID>
+    <Planet_Name f="id notnull">
+      <str>
+        <pos>2</pos>
+        <fmt>-$2</fmt>
+      </str>
+    </Planet_Name>
     <author>
       Surveyor
     </author>
@@ -127,6 +144,10 @@
       If yes, explain briefly.
     </Revisit_Reason>
     <!-- PUT END TRANSECT TIMESTAMP HERE? -->
+    <cols>
+      <EndTimestamp/>
+      <EndTimestampTimestampTrigger t="button"/>
+    </cols>
   </Revisit>
   <Unit>
     <New_Unit t="button" l="Unit"/>
@@ -307,4 +328,42 @@
 
 
 
+<logic>
+  addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");
+  //addOnEvent("Transect/General_Information/StopTimestampTrigger", "click", "setStopTimestamp()");
+
+setTimestamp(String path) {
+  setFieldValue(path, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z").format(new Date()));
+}
+
+// Linked using @POSTPROC
+setStartTimestamp() {
+  String ref = "Transect/General_Information/StartTimestamp";
+  setTimestamp(ref);
+}
+
+setStopTimestamp() {
+  String ref = "Transect/General_Information/StopTimestamp";
+  setTimestamp(ref);
+}
+
+  addOnEvent("Transect/General_Information", "show", "populateRecent()");
+
+
+  populateRecent(){
+
+  String tabgroup = "Control";
+  String refEntityList  = tabgroup + "/Main/RecentEntities";
+
+
+  String searchQuery = "SELECT uuid, response "+
+                       "  FROM latestNonDeletedArchEntFormattedIdentifiers join createdmodifiedatby using (uuid)  "+                       
+                       " ORDER BY modifiedatgmt desc, response "+
+                       " LIMIT 10 "+
+                       "OFFSET 0 ";
+
+  populateCursorList(refEntityList, searchQuery, 25);
+  refreshTabgroupCSS(tabgroup);
+  }
+</logic>
 
