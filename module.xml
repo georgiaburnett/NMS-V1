@@ -26,8 +26,12 @@
 <Transect>
   <General_Information>
     <cols>
-      <StartTimestamp/>
-      <StartTimestampTrigger t="button"/>
+      <StartTimestamp>
+        Start Timestamp
+      </StartTimestamp>
+      <StartTimestampTrigger t="button">
+        Record Start Timestamp
+      </StartTimestampTrigger>
     </cols>
     <Transect_ID f="id autonum notnull">
       <str>
@@ -161,8 +165,12 @@
       If yes, explain briefly.
     </Revisit_Reason>
     <cols>
-      <EndTimestamp/>
-      <EndTimestampTrigger t="button"/>
+      <EndTimestamp>
+        End Timestamp
+      </EndTimestamp>
+      <EndTimestampTrigger t="button">
+        Record End Timestamp
+      </EndTimestampTrigger>
     </cols>
   </Revisit>
   <Unit>
@@ -201,8 +209,12 @@
       </str>
     </Unit_ID>
     <cols>
-      <StartTimestamp/>
-      <StartTimestampTrigger t="button"/>
+      <StartTimestamp>
+        Start Timestamp
+      </StartTimestamp>
+      <StartTimestampTrigger t="button">
+        Record Start Timestamp
+      </StartTimestampTrigger>
     </cols>
     <Parent_Transect_ID f="id">
       <str>
@@ -397,8 +409,12 @@
       If yes, explain briefly.
     </Revisit_Reason_Unit>
     <cols>
-      <EndTimestamp/>
-      <EndTimestampTrigger t="button"/>
+      <EndTimestamp>
+        End Timestamp
+      </EndTimestamp>
+      <EndTimestampTrigger t="button">
+        Record End Timestamp
+      </EndTimestampTrigger>
     </cols>    
     <Finish_Unit t="button" l="Control"/>
   </Revisit_Unit>
