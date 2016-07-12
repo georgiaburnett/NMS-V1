@@ -175,17 +175,19 @@
 </Transect>
 
 <Orbit>
-  <Orbit_Number b="decimal" f="id"/>
-  <Agriculture />
-  <Architecture />
-  <Communications />
-  <Cultural />
-  <Industry />
-  <Military />
-  <Mining />
-  <Transport />
-  <Settlement />
-  <Other />
+  <Orbit>
+    <Orbit_Number b="decimal" f="id"/>
+    <Agriculture />
+    <Architecture />
+    <Communications />
+    <Cultural />
+    <Industry />
+    <Military />
+    <Mining />
+    <Transport />
+    <Settlement />
+    <Other />
+  </Orbit>
 </Orbit>
 
 <Unit>
@@ -378,16 +380,18 @@
 </Unit>
 
 <Row>
-  <Row_Number b="decimal" f="id"/>
-  <Metal />
-  <Sherd />
-  <Lithic />
-  <Technology />
-  <Structure />
-  <Wreck />
-  <Monolith />
-  <Settlement />
-  <Other />
+  <Row>
+    <Row_Number b="decimal" f="id"/>
+    <Metal />
+    <Sherd />
+    <Lithic />
+    <Technology />
+    <Structure />
+    <Wreck />
+    <Monolith />
+    <Settlement />
+    <Other />
+  </Row>
 </Row>
 
 <logic>
