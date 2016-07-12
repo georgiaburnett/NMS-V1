@@ -1,0 +1,818 @@
+digraph {
+	graph [
+		rankdir="LR"
+		fontname="Roboto"
+		splines=ortho
+		outputorder="nodesfirst"
+		ranksep=2
+	];
+	node [
+		fontsize="12"
+		shape=plaintext
+		fontname="Roboto"
+		margin=0
+		shape=none
+	];
+
+	subgraph cluster_b512d97e7c {
+		label="User"
+		bgcolor="lightblue"
+
+		_b512d97e7c [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_ab74b86763 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_ab74b86763 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">User</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_639e8cc20c [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_639e8cc20c"><IMG SRC="User_User_Select_User.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_2d3c307add [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_2d3c307add"><IMG SRC="User_User_Login.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	subgraph cluster_32d7e82082 {
+		label="Control"
+		bgcolor="lightblue"
+
+		_32d7e82082 [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_0b4b1a2af6 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_0b4b1a2af6 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">Main</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_9a5a8bad14 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_9a5a8bad14"><IMG SRC="Control_Main_New_Transect.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_08a6d8602b [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_08a6d8602b"><IMG SRC="Control_Main_RecentEntities.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_b5348d5536 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_b5348d5536 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Search</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_98a8f05303 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_b5348d5536"><IMG SRC="Control_Search_Search_Term.svg"></IMG></TD>
+						<TD PORT="_b5348d5536"><IMG SRC="Control_Search_Search_Button.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_18e4ee8dff [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_18e4ee8dff"><IMG SRC="Control_Search_Entity_Types.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_89e10496a5 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_89e10496a5"><IMG SRC="Control_Search_Entity_List.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_e347e383c9 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_e347e383c9 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Identifiers</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_2ba0faca20 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_2ba0faca20"><IMG SRC="Control_Identifiers_Next_Unit_ID.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_a5fcb0bde4 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_a5fcb0bde4"><IMG SRC="Control_Identifiers_Next_Transect_ID.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	subgraph cluster_6e8d2e75c2 {
+		label="Transect"
+		bgcolor="lightblue"
+
+		_6e8d2e75c2 [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_fbbfdf6a62 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_fbbfdf6a62 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">General<br/>Information</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_c72c42e29c [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_fbbfdf6a62"><IMG SRC="Transect_General_Information_StartTimestamp.svg"></IMG></TD>
+						<TD PORT="_fbbfdf6a62"><IMG SRC="Transect_General_Information_StartTimestampTrigger.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_1917ef0126 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_1917ef0126"><IMG SRC="Transect_General_Information_Transect_ID.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_efdc94c7a8 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_efdc94c7a8"><IMG SRC="Transect_General_Information_Planet_Name.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_007534cad4 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_007534cad4"><IMG SRC="Transect_General_Information_Author.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_ab0846449b [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_ab0846449b"><IMG SRC="Transect_General_Information_Geotag.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_ef24c7e364 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_ef24c7e364"><IMG SRC="Transect_General_Information_Number_Of_Orbits.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_2896e3fc6e [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_2896e3fc6e"><IMG SRC="Transect_General_Information_Survey_Method.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_e2efe07a9f [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_e2efe07a9f"><IMG SRC="Transect_General_Information_Predominant_Surface_Type.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_5d659caf23 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_5d659caf23"><IMG SRC="Transect_General_Information_Number_of_Features.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_c3c4f89fdb [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_c3c4f89fdb"><IMG SRC="Transect_General_Information_Location_and_description.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_f363a5b61e {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_f363a5b61e [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Survey<br/>Procedure</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_9e0aaeb6ba [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_9e0aaeb6ba"><IMG SRC="Transect_Survey_Procedure_Area_Surveyed.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_64c65b8529 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_64c65b8529"><IMG SRC="Transect_Survey_Procedure_Bearing.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_d4f94e5c99 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_d4f94e5c99"><IMG SRC="Transect_Survey_Procedure_Comment_on_transect.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_e5a6f17fc3 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_e5a6f17fc3"><IMG SRC="Transect_Survey_Procedure_Video_Capture_URL.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_f033ec36dc [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_f033ec36dc"><IMG SRC="Transect_Survey_Procedure_Screengrab_Filename.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_d294db2401 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_d294db2401"><IMG SRC="Transect_Survey_Procedure_Attach_a_Screengrab.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_aaea4e874e [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_aaea4e874e"><IMG SRC="Transect_Survey_Procedure_Button_Attach_a_Screengrab.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_9ad114e643 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_9ad114e643 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Planetary<br/>Coverage</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_a0b26de0fc [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_a0b26de0fc"><IMG SRC="Transect_Planetary_Coverage_Dominant_Planet_Coverage.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_74eca4f8b4 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_74eca4f8b4"><IMG SRC="Transect_Planetary_Coverage_Dominant_Planet_Coverage_Other.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_2f42f08379 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_2f42f08379"><IMG SRC="Transect_Planetary_Coverage_Percentage_of_Visable_Surface.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_bba3c6e304 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_bba3c6e304"><IMG SRC="Transect_Planetary_Coverage_Comment_on_planetary_coverage.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_35fe257b19 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_35fe257b19 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Surface<br/>Conditions</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_8b94f3450d [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_8b94f3450d"><IMG SRC="Transect_Surface_Conditions_Comment_on_surface_conditions.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_cd99464f12 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_cd99464f12"><IMG SRC="Transect_Surface_Conditions_Features.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_2cc638d840 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_2cc638d840 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Revisit</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_74dd971254 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_74dd971254"><IMG SRC="Transect_Revisit_Revisit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_e1b446d277 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_e1b446d277"><IMG SRC="Transect_Revisit_Revisit_Reason.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_66a9e51a04 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR>
+						<TD PORT="_2cc638d840"><IMG SRC="Transect_Revisit_EndTimestamp.svg"></IMG></TD>
+						<TD PORT="_2cc638d840"><IMG SRC="Transect_Revisit_EndTimestampTimestampTrigger.svg"></IMG></TD>
+					</TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_49056e82e1 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_49056e82e1 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Unit</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_ee5d78bd82 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_ee5d78bd82"><IMG SRC="Transect_Unit_New_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_04759deacc [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_04759deacc"><IMG SRC="Transect_Unit_Next___REPLACE__.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	subgraph cluster_4e545960f1 {
+		label="Unit"
+		bgcolor="lightblue"
+
+		_4e545960f1 [label="" fixedsize=shape width=0 height=0]
+
+		subgraph cluster_41dc6a20be {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_41dc6a20be [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" ALIGN="TEXT">General<br/>Information</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_1fdfc16a70 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_1fdfc16a70"><IMG SRC="Unit_General_Information_Unit_ID.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_3d84a1df36 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_3d84a1df36"><IMG SRC="Unit_General_Information_Author.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_1b9aa82ace [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_1b9aa82ace"><IMG SRC="Unit_General_Information_Geotag_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_70db95e305 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_70db95e305"><IMG SRC="Unit_General_Information_Survey_Procedure_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_39551497b9 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_39551497b9"><IMG SRC="Unit_General_Information_Survey_State_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_bdbe3e4247 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_bdbe3e4247"><IMG SRC="Unit_General_Information_Number_of_Items_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_9f41649603 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_9f41649603"><IMG SRC="Unit_General_Information_Location_and_description_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_5f8e3663a4 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_5f8e3663a4 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Survey<br/>Procedure</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_cef6dea9a8 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_cef6dea9a8"><IMG SRC="Unit_Survey_Procedure_Area_Surveyed_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_db0345cf0d [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_db0345cf0d"><IMG SRC="Unit_Survey_Procedure_Bearing_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_cb229e56ee [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_cb229e56ee"><IMG SRC="Unit_Survey_Procedure_Comment_on_unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_998bcb8860 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_998bcb8860"><IMG SRC="Unit_Survey_Procedure_Video_Capture_URL.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_1ed9f9875a [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_1ed9f9875a"><IMG SRC="Unit_Survey_Procedure_Screengrab_Filename.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_8d446cf0a2 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_8d446cf0a2"><IMG SRC="Unit_Survey_Procedure_Attach_a_Screengrab.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_5400a6f534 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_5400a6f534"><IMG SRC="Unit_Survey_Procedure_Button_Attach_a_Screengrab.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_c5719e8638 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_c5719e8638 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Vegetation and<br/>Land Use</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_93a6f69166 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_93a6f69166"><IMG SRC="Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Land_Use.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_a55b623ef2 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_a55b623ef2"><IMG SRC="Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Land_Use_Other.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_da217eee4c [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_da217eee4c"><IMG SRC="Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Height.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_612a88b0b6 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_612a88b0b6"><IMG SRC="Unit_Vegetation_and_Land_Use_Surface_Visibility.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_c8d172b3b3 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_c8d172b3b3"><IMG SRC="Unit_Vegetation_and_Land_Use_Comment_on_vegetation_and_land_use.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_f2714b30fb {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_f2714b30fb [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Field<br/>Conditions</TD>
+						<TD SIDES="b" BORDER="1">...</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_cab4a28b8a [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_cab4a28b8a"><IMG SRC="Unit_Field_Conditions_Soil_Condition.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_3014646a5b [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_3014646a5b"><IMG SRC="Unit_Field_Conditions_Background_Disturbance.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_c7060054d8 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_c7060054d8"><IMG SRC="Unit_Field_Conditions_Sherd_Crusting.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_25de730d2b [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_25de730d2b"><IMG SRC="Unit_Field_Conditions_Dominant_Surface_Clast_Size.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_9d46b126e5 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_9d46b126e5"><IMG SRC="Unit_Field_Conditions_Clast_Shape.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_0a6bc11f9b [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_0a6bc11f9b"><IMG SRC="Unit_Field_Conditions_Soil_Tint.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_31fa337a62 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_31fa337a62"><IMG SRC="Unit_Field_Conditions_Soil_Hue.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_455ced5098 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_455ced5098"><IMG SRC="Unit_Field_Conditions_Comment_on_field_conditions.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_a3b3d7148e [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_a3b3d7148e"><IMG SRC="Unit_Field_Conditions_Features_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+		subgraph cluster_835e3ad3a0 {
+			label=""
+			bgcolor="white"
+			ordering="in"
+
+			struct_Label_835e3ad3a0 [
+			label=<
+				<TABLE BORDER="1" CELLBORDER="3" CELLSPACING="0" CELLPADDING="5" WIDTH="150" HEIGHT="10">
+					<TR>
+						<TD SIDES="b" BORDER="1">...</TD>
+						<TD SIDES="b" ALIGN="TEXT">Revisit Unit</TD>
+					</TR>
+				</TABLE>
+			>];
+
+			struct_Elems_a66b0dfa03 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_a66b0dfa03"><IMG SRC="Unit_Revisit_Unit_Revisit_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_a092b21778 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_a092b21778"><IMG SRC="Unit_Revisit_Unit_Revisit_Reason_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+			struct_Elems_63ee88e4a6 [
+			label=<
+				<TABLE BORDER="0" CELLSPACING="0" WIDTH="150">
+					<TR><TD PORT="_63ee88e4a6"><IMG SRC="Unit_Revisit_Unit_Finish_Unit.svg"/></TD></TR>
+				</TABLE>
+			>];
+
+		}
+
+	}
+
+	/* Intra-tab, label-to-label links */
+	struct_Label_0b4b1a2af6 -> struct_Label_b5348d5536
+	struct_Label_b5348d5536 -> struct_Label_e347e383c9
+	struct_Label_fbbfdf6a62 -> struct_Label_f363a5b61e
+	struct_Label_f363a5b61e -> struct_Label_9ad114e643
+	struct_Label_9ad114e643 -> struct_Label_35fe257b19
+	struct_Label_35fe257b19 -> struct_Label_2cc638d840
+	struct_Label_2cc638d840 -> struct_Label_49056e82e1
+	struct_Label_41dc6a20be -> struct_Label_5f8e3663a4
+	struct_Label_5f8e3663a4 -> struct_Label_c5719e8638
+	struct_Label_c5719e8638 -> struct_Label_f2714b30fb
+	struct_Label_f2714b30fb -> struct_Label_835e3ad3a0
+	/* Graph-constraining links */
+	_b512d97e7c -> _32d7e82082 [style=invis]
+	_32d7e82082 -> _6e8d2e75c2 [style=invis]
+	_6e8d2e75c2 -> _4e545960f1 [style=invis]
+	_4e545960f1 -> _32d7e82082 [style=invis]
+	/* User-specified links */
+	struct_Elems_2d3c307add:_2d3c307add -> struct_Label_0b4b1a2af6 [constraint=false]
+	struct_Elems_9a5a8bad14:_9a5a8bad14 -> struct_Label_fbbfdf6a62 [constraint=false]
+	struct_Elems_ee5d78bd82:_ee5d78bd82 -> struct_Label_41dc6a20be [constraint=false]
+	struct_Elems_63ee88e4a6:_63ee88e4a6 -> struct_Label_0b4b1a2af6 [constraint=false]
+}

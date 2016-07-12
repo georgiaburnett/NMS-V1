@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Fill This In</h:title>
+    <model>
+      <instance>
+        <faims id="Fill_This_In">
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <User>
+            <User>
+              <Select_User/>
+              <Login/>
+            </User>
+          </User>
+          <Control>
+            <Main>
+              <New_Transect/>
+              <RecentEntities/>
+            </Main>
+            <Search>
+              <Colgroup_0>
+                <Col_0>
+                  <Search_Term/>
+                </Col_0>
+                <Col_1>
+                  <Search_Button/>
+                </Col_1>
+              </Colgroup_0>
+              <Entity_Types/>
+              <Entity_List/>
+            </Search>
+            <Identifiers>
+              <Next_Transect_ID/>
+              <Next_Unit_ID/>
+            </Identifiers>
+          </Control>
+          <Transect>
+            <General_Information>
+              <Colgroup_0>
+                <Col_0>
+                  <StartTimestamp/>
+                </Col_0>
+                <Col_1>
+                  <StartTimestampTrigger/>
+                </Col_1>
+              </Colgroup_0>
+              <Transect_ID/>
+              <Planet_Name/>
+              <author/>
+              <Geotag/>
+              <Number_Of_Orbits/>
+              <Survey_Method/>
+              <Predominant_Surface_Type/>
+              <Number_of_Features/>
+              <Location_and_description/>
+            </General_Information>
+            <Survey_Procedure>
+              <Area_Surveyed/>
+              <Bearing/>
+              <Comment_on_transect/>
+              <Video_Capture_URL/>
+              <Screengrab_Filename/>
+              <Attach_a_Screengrab/>
+              <Button_Attach_a_Screengrab/>
+            </Survey_Procedure>
+            <Planetary_Coverage>
+              <Dominant_Planet_Coverage/>
+              <Dominant_Planet_Coverage_Other/>
+              <Percentage_of_Visable_Surface/>
+              <Comment_on_planetary_coverage/>
+            </Planetary_Coverage>
+            <Surface_Conditions>
+              <Comment_on_surface_conditions/>
+              <Features/>
+            </Surface_Conditions>
+            <Revisit>
+              <Revisit/>
+              <Revisit_Reason/>
+              <Colgroup_0>
+                <Col_0>
+                  <EndTimestamp/>
+                </Col_0>
+                <Col_1>
+                  <EndTimestampTimestampTrigger/>
+                </Col_1>
+              </Colgroup_0>
+            </Revisit>
+            <Unit>
+              <New_Unit/>
+              <Next_Transect_ID/>
+              <Next_Unit_ID/>
+            </Unit>
+          </Transect>
+          <Unit>
+            <General_Information>
+              <Unit_ID/>
+              <author/>
+              <Geotag_Unit/>
+              <Survey_Procedure_Unit/>
+              <Survey_State_Unit/>
+              <Number_of_Items_Unit/>
+              <Location_and_description_Unit/>
+            </General_Information>
+            <Survey_Procedure>
+              <Area_Surveyed_Unit/>
+              <Bearing_Unit/>
+              <Comment_on_unit/>
+              <Video_Capture_URL/>
+              <Screengrab_Filename/>
+              <Attach_a_Screengrab/>
+              <Button_Attach_a_Screengrab/>
+            </Survey_Procedure>
+            <Vegetation_and_Land_Use>
+              <Dominant_Vegetation_Land_Use/>
+              <Dominant_Vegetation_Land_Use_Other/>
+              <Dominant_Vegetation_Height/>
+              <Surface_Visibility/>
+              <Comment_on_vegetation_and_land_use/>
+            </Vegetation_and_Land_Use>
+            <Field_Conditions>
+              <Soil_Condition/>
+              <Background_Disturbance/>
+              <Sherd_Crusting/>
+              <Dominant_Surface_Clast_Size/>
+              <Clast_Shape/>
+              <Soil_Tint/>
+              <Soil_Hue/>
+              <Comment_on_field_conditions/>
+              <Features_Unit/>
+            </Field_Conditions>
+            <Revisit_Unit>
+              <Revisit_Unit/>
+              <Revisit_Reason_Unit/>
+              <Finish_Unit/>
+            </Revisit_Unit>
+          </Unit>
+          <logic/>
+        </faims>
+      </instance>
+      <bind type="decimal" nodeset="/faims/Control/Identifiers/Next_Transect_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Identifiers/Next_Unit_ID"/>
+      <bind type="decimal" nodeset="/faims/Transect/General_Information/Transect_ID"/>
+      <bind type="decimal" nodeset="/faims/Transect/General_Information/Number_Of_Orbits"/>
+      <bind type="decimal" nodeset="/faims/Transect/General_Information/Number_of_Features"/>
+      <bind type="decimal" nodeset="/faims/Transect/Survey_Procedure/Area_Surveyed"/>
+      <bind type="decimal" nodeset="/faims/Transect/Survey_Procedure/Bearing"/>
+      <bind type="decimal" nodeset="/faims/Transect/Planetary_Coverage/Percentage_of_Visable_Surface"/>
+      <bind type="decimal" nodeset="/faims/Control/Identifiers/Next_Transect_ID"/>
+      <bind type="decimal" nodeset="/faims/Control/Identifiers/Next_Unit_ID"/>
+      <bind type="decimal" nodeset="/faims/Unit/General_Information/Unit_ID"/>
+      <bind type="decimal" nodeset="/faims/Unit/General_Information/Number_of_Items_Unit"/>
+      <bind type="decimal" nodeset="/faims/Unit/Survey_Procedure/Area_Surveyed_Unit"/>
+      <bind type="decimal" nodeset="/faims/Unit/Survey_Procedure/Bearing_Unit"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <group ref="User">
+      <label>{User}</label>
+      <group ref="User">
+        <label>{User}</label>
+        <select1 ref="Select_User">
+          <label>{Select_User}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <trigger ref="Login">
+          <label>{Login}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Control">
+      <label>{Control}</label>
+      <group ref="Main">
+        <label>{Main}</label>
+        <trigger ref="New_Transect">
+          <label>{New_Transect}</label>
+        </trigger>
+        <select1 appearance="compact" ref="RecentEntities">
+          <label>{RecentEntities}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Search" faims_scrollable="false">
+        <label>{Records}</label>
+        <group faims_style="orientation" ref="Colgroup_0">
+          <label/>
+          <group faims_style="even" ref="Col_0">
+            <label/>
+            <input ref="Search_Term">
+              <label>{Search_Term}</label>
+            </input>
+          </group>
+          <group faims_style="large" ref="Col_1">
+            <label/>
+            <trigger ref="Search_Button">
+              <label>{Search}</label>
+            </trigger>
+          </group>
+        </group>
+        <select1 ref="Entity_Types">
+          <label>{Entity_Types}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 appearance="compact" ref="Entity_List">
+          <label>{Entity_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Identifiers">
+        <label>{Identifiers}</label>
+        <input ref="Next_Transect_ID" faims_style_class="required">
+          <label>{Next_Transect_ID}</label>
+        </input>
+        <input ref="Next_Unit_ID" faims_style_class="required">
+          <label>{Next_Unit_ID}</label>
+        </input>
+      </group>
+    </group>
+    <group ref="Transect" faims_archent_type="Transect">
+      <label>{Transect}</label>
+      <group ref="General_Information">
+        <label>{General_Information}</label>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="StartTimestamp" faims_attribute_name="StartTimestamp">
+              <label>{StartTimestamp}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <trigger ref="StartTimestampTrigger">
+              <label>{StartTimestampTrigger}</label>
+            </trigger>
+          </group>
+        </group>
+        <input faims_attribute_type="measure" ref="Transect_ID" faims_attribute_name="Transect ID" faims_style_class="required">
+          <label>{Transect_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Planet_Name" faims_attribute_name="Planet Name" faims_style_class="required">
+          <label>{Planet_Name}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input ref="author" faims_attribute_name="Transect author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{Surveyor}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="Geotag" faims_attribute_name="Geotag" faims_style_class="required">
+          <label>{Geotag}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Number_Of_Orbits" faims_attribute_name="Number Of Orbits">
+          <label>{Number_Of_Orbits}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <select1 faims_attribute_type="vocab" ref="Survey_Method" faims_attribute_name="Survey Method" faims_style_class="required">
+          <label>{Survey_Method}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Predominant_Surface_Type" faims_attribute_name="Predominant Surface Type" faims_style_class="required">
+          <label>{Predominant_Surface_Type}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Number_of_Features" faims_attribute_name="Number of Features">
+          <label>{Number_of_Features}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Location_and_description" faims_attribute_name="Location and description">
+          <label>{Location_and_description}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Survey_Procedure">
+        <label>{Survey_Procedure}</label>
+        <input faims_attribute_type="measure" ref="Area_Surveyed" faims_attribute_name="Area Surveyed">
+          <label>{Area_Surveyed__sq__km__}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Bearing" faims_attribute_name="Bearing">
+          <label>{Bearing__degrees_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Comment_on_transect" faims_attribute_name="Comment on transect">
+          <label>{Comment_on_transect}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Video_Capture_URL" faims_attribute_name="Video Capture URL" faims_style_class="required">
+          <label>{Video_Capture_URL}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Screengrab_Filename" faims_attribute_name="Screengrab Filename">
+          <label>{Screengrab_Filename}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <select type="file" faims_attribute_type="measure" faims_sync="true" ref="Attach_a_Screengrab" faims_attribute_name="Attach a Screengrab">
+          <label>{Attach_a_Screengrab}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <trigger ref="Button_Attach_a_Screengrab">
+          <label>{Button_Attach_a_Screengrab}</label>
+        </trigger>
+      </group>
+      <group ref="Planetary_Coverage">
+        <label>{Planetary_Coverage}</label>
+        <select faims_attribute_type="vocab" ref="Dominant_Planet_Coverage" faims_attribute_name="Dominant Planet Coverage">
+          <label>{Dominant_Planet_Coverage}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <input faims_attribute_type="measure" ref="Dominant_Planet_Coverage_Other" faims_attribute_name="Dominant Planet Coverage Other">
+          <label>{If_dominant_planet_coverage_is__other___please_explain_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Percentage_of_Visable_Surface" faims_attribute_name="Percentage of Visable Surface">
+          <label>{Percentage_of_Visable_Surface}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Comment_on_planetary_coverage" faims_attribute_name="Comment on planetary coverage">
+          <label>{Comment_on_planetary_coverage}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Surface_Conditions">
+        <label>{Surface_Conditions}</label>
+        <input faims_attribute_type="measure" ref="Comment_on_surface_conditions" faims_attribute_name="Comment on surface conditions">
+          <label>{Comment_on_surface_conditions}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Features" faims_attribute_name="Features">
+          <label>{Features}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Revisit">
+        <label>{Revisit}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Revisit" faims_attribute_name="Revisit" faims_style_class="required">
+          <label>{Revisit_}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Revisit_Reason" faims_attribute_name="Revisit Reason">
+          <label>{If_yes__explain_briefly_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="EndTimestamp" faims_attribute_name="EndTimestamp">
+              <label>{EndTimestamp}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <trigger ref="EndTimestampTimestampTrigger">
+              <label>{EndTimestampTimestampTrigger}</label>
+            </trigger>
+          </group>
+        </group>
+      </group>
+      <group ref="Unit">
+        <label>{Unit}</label>
+        <trigger ref="New_Unit">
+          <label>{New_Unit}</label>
+        </trigger>
+        <input ref="Next_Transect_ID" faims_style_class="required">
+          <label>{Next_Transect_ID}</label>
+        </input>
+        <input ref="Next_Unit_ID" faims_style_class="required">
+          <label>{Next_Unit_ID}</label>
+        </input>
+      </group>
+    </group>
+    <group ref="Unit" faims_archent_type="Unit">
+      <label>{Unit}</label>
+      <group ref="General_Information">
+        <label>{General_Information}</label>
+        <input faims_attribute_type="measure" ref="Unit_ID" faims_attribute_name="Unit ID" faims_style_class="required">
+          <label>{Unit_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input ref="author" faims_attribute_name="Unit author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{Surveyor}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="Geotag_Unit" faims_attribute_name="Geotag Unit" faims_style_class="required">
+          <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{Geotag}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <select1 faims_attribute_type="vocab" ref="Survey_Procedure_Unit" faims_attribute_name="Survey Procedure Unit">
+          <label>{Survey_Procedure_Unit}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_type="vocab" ref="Survey_State_Unit" faims_attribute_name="Survey State Unit" faims_style_class="required">
+          <label>{Is_the_area___}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Number_of_Items_Unit" faims_attribute_name="Number of Items Unit">
+          <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{Number_of_Items}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Location_and_description_Unit" faims_attribute_name="Location and description Unit">
+          <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{Location_and_description}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Survey_Procedure">
+        <label>{Survey_Procedure}</label>
+        <input faims_attribute_type="measure" ref="Area_Surveyed_Unit" faims_attribute_name="Area Surveyed Unit">
+          <label>{Area_Surveyed__sq__km__}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Bearing_Unit" faims_attribute_name="Bearing Unit">
+          <label>{Bearing__degrees_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Comment_on_unit" faims_attribute_name="Comment on unit">
+          <label>{Comment_on_unit}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Video_Capture_URL" faims_attribute_name="Video Capture URL" faims_style_class="required">
+          <label>{Video_Capture_URL}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Screengrab_Filename" faims_attribute_name="Screengrab Filename">
+          <label>{Screengrab_Filename}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <select type="file" faims_attribute_type="measure" faims_sync="true" ref="Attach_a_Screengrab" faims_attribute_name="Attach a Screengrab">
+          <label>{Attach_a_Screengrab}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <trigger ref="Button_Attach_a_Screengrab">
+          <label>{Button_Attach_a_Screengrab}</label>
+        </trigger>
+      </group>
+      <group ref="Vegetation_and_Land_Use">
+        <label>{Vegetation_and_Land_Use}</label>
+        <select faims_attribute_type="vocab" ref="Dominant_Vegetation_Land_Use" faims_attribute_name="Dominant Vegetation Land Use">
+          <label>{Dominant_vegetation_and_land_use_}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <input faims_attribute_type="measure" ref="Dominant_Vegetation_Land_Use_Other" faims_attribute_name="Dominant Vegetation Land Use Other">
+          <label>{If_vegetation_or_land_use_is__other___please_explain_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Dominant_Vegetation_Height" faims_attribute_name="Dominant Vegetation Height">
+          <label>{Dominant_Vegetation_Height}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Surface_Visibility" faims_attribute_name="Surface Visibility" faims_style_class="required">
+          <label>{Surface_Visibility____}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Comment_on_vegetation_and_land_use" faims_attribute_name="Comment on vegetation and land use">
+          <label>{Comment_on_vegetation_and_land_use}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Field_Conditions">
+        <label>{Field_Conditions}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Soil_Condition" faims_attribute_name="Soil Condition">
+          <label>{Soil_Condition}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Background_Disturbance" faims_attribute_name="Background Disturbance">
+          <label>{Background_Disturbance}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Sherd_Crusting" faims_attribute_name="Sherd Crusting">
+          <label>{Sherd_Crusting}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Dominant_Surface_Clast_Size" faims_attribute_name="Dominant Surface Clast Size">
+          <label>{Dominant_Surface_Clast_Size}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Clast_Shape" faims_attribute_name="Clast Shape">
+          <label>{Clast_Shape}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Soil_Tint" faims_attribute_name="Soil Tint">
+          <label>{Soil_Tint}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Soil_Hue" faims_attribute_name="Soil Hue">
+          <label>{Soil_Hue}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Comment_on_field_conditions" faims_attribute_name="Comment on field conditions">
+          <label>{Comment_on_field_conditions}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Features_Unit" faims_attribute_name="Features Unit">
+          <label>{Features_Unit}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+      </group>
+      <group ref="Revisit_Unit">
+        <label>{Revisit_Unit}</label>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Revisit_Unit" faims_attribute_name="Revisit Unit" faims_style_class="required">
+          <label>{Revisit_}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Revisit_Reason_Unit" faims_attribute_name="Revisit Reason Unit">
+          <label>{If_yes__explain_briefly_}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <trigger ref="Finish_Unit">
+          <label>{Finish_Unit}</label>
+        </trigger>
+      </group>
+    </group>
+  </h:body>
+</h:html>
