@@ -190,7 +190,12 @@
 
 <Unit>
   <General_Information>
-    <Unit_ID f="id autonum notnull"/>
+    <Unit_ID f="id autonum notnull">
+      <str>
+        <pos>1</pos>
+        <fmt>Unit $2</fmt>
+      </str>
+    </Unit_ID>
     <cols>
       <StartTimestamp/>
       <StartTimestampTrigger t="button"/>
