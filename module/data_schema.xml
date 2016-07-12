@@ -5,6 +5,11 @@
     <parent>Parent Of</parent>
     <child>Child Of</child>
   </RelationshipElement>
+  <RelationshipElement name="Transect - Unit" type="hierarchical">
+    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <parent>Parent Of</parent>
+    <child>Child Of</child>
+  </RelationshipElement>
   <RelationshipElement name="Unit - Row" type="hierarchical">
     <description>A 1-to-n relationship between the parent and its children, respectively.</description>
     <parent>Parent Of</parent>
@@ -113,11 +118,6 @@
         <term><!--WARNING: Option is duplicated in this menu-->{W}
 <description/></term>
       </lookup>
-    </property>
-    <property name="New Orbit">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Comment on transect" type="measure">
       <description>Comments about the transect including identifying "other" macro-artefacts, built environments, glitches, explanation of field procedures, etc.</description>
@@ -299,6 +299,21 @@
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
+    <property name="StartTimestamp" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Parent Transect ID" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Parent Planet Name" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
     <property name="Unit author" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
@@ -306,6 +321,11 @@
     </property>
     <property name="Geotag Unit" type="measure">
       <description>This will be updated as we figure out how NMS uses co-ordinates, location, etc. Stay tuned!</description>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="label" type="measure">
+      <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
@@ -380,11 +400,6 @@
         <term><!--WARNING: Option is duplicated in this menu-->{W}
 <description/></term>
       </lookup>
-    </property>
-    <property name="New Survey Row">
-      <description/>
-      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
-      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Comment on unit" type="measure">
       <description>Comments about the unit including identifying "other" artefacts, glitches, explanation of field procedures, etc.</description>
@@ -594,6 +609,11 @@
       </lookup>
     </property>
     <property name="Revisit Reason Unit" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="EndTimestamp" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>

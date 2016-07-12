@@ -654,7 +654,7 @@ validateUnit() {
   List f = new ArrayList(); // Fields to be validated
 
   f.add(fieldPair("Unit/General_Information/Unit_ID", "{Unit_ID}"));
-  f.add(fieldPair("Unit/General_Information/Geotag_Unit", "{Geotag}"));
+  f.add(fieldPair("Unit/General_Information/Geotag_Unit", "{Geotag_Unit}"));
   f.add(fieldPair("Unit/General_Information/Survey_State_Unit", "{Is_the_area___}"));
   f.add(fieldPair("Unit/Survey_Procedure/Video_Capture_URL", "{Video_Capture_URL}"));
   f.add(fieldPair("Unit/Vegetation_and_Land_Use/Surface_Visibility", "{Surface_Visibility____}"));
@@ -784,11 +784,6 @@ onClickControlNewTransect () {
   parentTabgroup__ = "Control";
   newTransect();
 }
-onClickTransectNewUnit () {
-  // TODO: Add some things which should happen when this element is clicked
-  parentTabgroup__ = "Transect";
-  newUnit();
-}
 onClickUnitFinishUnit () {
   // TODO: Add some things which should happen when this element is clicked
   newTab("Control", true);
@@ -804,6 +799,17 @@ onClickTransectNewOrbit () {
   parentTabgroup__ = tabgroup;
   newOrbit();
 }
+onClickTransectNewUnit () {
+  // TODO: Add some things which should happen when this element is clicked
+  String tabgroup = "Transect";
+  if (isNull(getUuid(tabgroup))){
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
+  parentTabgroup   = tabgroup;
+  parentTabgroup__ = tabgroup;
+  newUnit();
+}
 onClickUnitNewSurveyRow () {
   // TODO: Add some things which should happen when this element is clicked
   String tabgroup = "Unit";
@@ -818,9 +824,9 @@ onClickUnitNewSurveyRow () {
 
 addOnEvent("User/User/Login", "click", "onClickUserLogin()");
 addOnEvent("Control/Main/New_Transect", "click", "onClickControlNewTransect()");
-addOnEvent("Transect/Survey_Procedure/New_Orbit", "click", "onClickTransectNewOrbit()");
+addOnEvent("Transect/Orbits/New_Orbit", "click", "onClickTransectNewOrbit()");
 addOnEvent("Transect/Unit/New_Unit", "click", "onClickTransectNewUnit()");
-addOnEvent("Unit/Survey_Procedure/New_Survey_Row", "click", "onClickUnitNewSurveyRow()");
+addOnEvent("Unit/Survey_Record/New_Survey_Row", "click", "onClickUnitNewSurveyRow()");
 addOnEvent("Unit/Revisit_Unit/Finish_Unit", "click", "onClickUnitFinishUnit()");
 
 
@@ -1602,7 +1608,7 @@ populateMenuWithEntities (
 menus = new ArrayList();
 menus.add(new String[] {
   "List",
-  "Transect/Survey_Procedure/Orbit_List",
+  "Transect/Orbits/Orbit_List",
   "getUuid(\"Transect\")",
   "Orbit",
   "Transect - Orbit",
@@ -1616,7 +1622,7 @@ menus.add(new String[] {
 });
 menus.add(new String[] {
   "List",
-  "Unit/Survey_Procedure/Row_List",
+  "Unit/Survey_Record/Row_List",
   "getUuid(\"Unit\")",
   "Row",
   "Unit - Row",
@@ -1643,16 +1649,20 @@ for (m : menus) {
 
   addOnEvent(path, "show", functionCall);
 }
-addOnEvent("Transect/Survey_Procedure/Orbit_List", "click", "loadEntity()");
+addOnEvent("Transect/Orbits/Orbit_List", "click", "loadEntity()");
 addOnEvent("Transect/Unit/Unit_List", "click", "loadEntity()");
-addOnEvent("Unit/Survey_Procedure/Row_List", "click", "loadEntity()");
+addOnEvent("Unit/Survey_Record/Row_List", "click", "loadEntity()");
 
 /******************************************************************************/
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
 
   addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");
-  addOnEvent("Transect/General_Information/StopTimestampTrigger", "click", "setStopTimestamp()");
+  addOnEvent("Transect/Revisit/EndTimestampTrigger", "click", "setEndTimestamp()");
+  
+  addOnEvent("Unit/General_Information/StartTimestampTrigger", "click", "setStartTimestamp_Unit()");
+  addOnEvent("Unit/Revisit_Unit/EndTimestampTrigger", "click", "setEndTimestamp_Unit()");
+
 
 setTimestamp(String path) {
   setFieldValue(path, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z").format(new Date()));
@@ -1664,8 +1674,18 @@ setStartTimestamp() {
   setTimestamp(ref);
 }
 
-setStopTimestamp() {
-  String ref = "Transect/General_Information/StopTimestamp";
+setEndTimestamp() {
+  String ref = "Transect/Revisit/EndTimestamp";
+  setTimestamp(ref);
+}
+
+setStartTimestamp_Unit() {
+  String ref = "Unit/General_Information/StartTimestamp";
+  setTimestamp(ref);
+}
+
+setEndTimestamp_Unit() {
+  String ref = "Unit/Revisit_Unit/EndTimestamp";
   setTimestamp(ref);
 }
 
@@ -1687,6 +1707,35 @@ setStopTimestamp() {
   populateCursorList(refEntityList, searchQuery, 25);
   refreshTabgroupCSS(tabgroup);
   }
+
+
+newUnit(){
+  String tabgroup = "Unit";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Identifiers/Next_Unit_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+                
+              
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+  populateAuthorAndTimestamp(tabgroup);
+  String autoNumDest = "";
+  autoNumDest = "Unit/General_Information/Unit_ID";
+  incAutoNum(autoNumDest);
+
+
+  setFieldValue("Unit/General_Information/Parent_Transect_ID", getFieldValue("Transect/General_Information/Transect_ID"));
+  setFieldValue("Unit/General_Information/Parent_Planet_Name", getFieldValue("Transect/General_Information/Planet_Name"));
+  
+}
+
+
 
 /******************************************************************************/
 /*                                    INIT                                    */
