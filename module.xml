@@ -174,7 +174,11 @@
 
 <Orbit>
   <Orbit>
-    <Orbit_Number b="decimal" f="id notnull"/>
+    <Orbit_Number b="decimal" f="id notnull">
+      <str>
+        <fmt>Orbit $2</fmt>
+      </str>
+    </Orbit_Number>    
     <Agriculture />
     <Architecture />
     <Communications />
@@ -192,16 +196,27 @@
   <General_Information>
     <Unit_ID f="id autonum notnull">
       <str>
-        <pos>1</pos>
-        <fmt>Unit $2</fmt>
+        <pos>3</pos>
+        <fmt> - Unit $2</fmt>
       </str>
     </Unit_ID>
     <cols>
       <StartTimestamp/>
       <StartTimestampTrigger t="button"/>
     </cols>
-    <Parent_Transect_ID/>
-    <Parent_Planet_Name/>
+    <Parent_Transect_ID f="id">
+      <str>
+        <pos>1</pos>
+        <fmt>Transect $2</fmt>
+      </str>      
+
+    </Parent_Transect_ID>
+    <Parent_Planet_Name f="id">
+        <str>
+        <pos>2</pos>
+        <fmt> - $2</fmt>
+      </str>      
+    </Parent_Planet_Name>
     <author>
       Surveyor
     </author>
@@ -391,7 +406,11 @@
 
 <Row>
   <Row>
-    <Row_Number b="decimal" f="id notnull"/>
+    <Row_Number b="decimal" f="id notnull">
+      <str>
+        <fmt>Row $2</fmt>
+      </str>
+    </Row_Number>
     <Metal />
     <Sherd />
     <Lithic />
@@ -437,10 +456,11 @@ setEndTimestamp_Unit() {
   setTimestamp(ref);
 }
 
-  addOnEvent("Transect/General_Information", "show", "populateRecent()");
+addOnEvent("Transect/General_Information", "show", "populateRecent()");
+addOnEvent("Control/Main/RecentEntities"   , "click" , "loadEntity();");
 
 
-  populateRecent(){
+populateRecent(){
 
   String tabgroup = "Control";
   String refEntityList  = tabgroup + "/Main/RecentEntities";
@@ -454,7 +474,12 @@ setEndTimestamp_Unit() {
 
   populateCursorList(refEntityList, searchQuery, 5);
   refreshTabgroupCSS(tabgroup);
-  }
+
+
+
+  Log.d("Module", "Search query: " + searchQuery);
+
+}
 
 
 newUnit(){
