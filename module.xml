@@ -92,8 +92,6 @@
         </opts>
       </To_Direction>      
     </cols>
-    <New_Orbit t="Button" lc="Orbit"/>
-    <Orbit_List t="list" ec="Orbit" />
     <Comment_on_transect>
       <desc>Comments about the transect including identifying "other" macro-artefacts, built environments, glitches, explanation of field procedures, etc.</desc>
     </Comment_on_transect>
@@ -105,6 +103,10 @@
       <desc>Attach a screengrab using this feature. Can be uploaded from you device - locally via cloud software like Dropbox - or post fact.</desc>
     </Attach_a_Screengrab>
   </Survey_Procedure>
+  <Orbits>
+    <New_Orbit t="button" lc="Orbit"/>
+    <Orbit_List t="list" ec="Orbit" />
+  </Orbits>
   <Planetary_Coverage>
     <Dominant_Planet_Coverage t="checkbox">
       <desc>Check as many as apply.</desc>
@@ -158,10 +160,9 @@
     <Revisit_Reason>
       If yes, explain briefly.
     </Revisit_Reason>
-    <!-- PUT END TRANSECT TIMESTAMP HERE? -->
     <cols>
       <EndTimestamp/>
-      <EndTimestampTimestampTrigger t="button"/>
+      <EndTimestampTrigger t="button"/>
     </cols>
   </Revisit>
   <Unit>
@@ -190,8 +191,10 @@
 <Unit>
   <General_Information>
     <Unit_ID f="id autonum notnull"/>
-    <!-- PUT START UNIT TIMESTAMP HERE-->
-    <!-- PUT END UNIT TIMESTAMP HERE? -->
+    <cols>
+      <StartTimestamp/>
+      <StartTimestampTrigger t="button"/>
+    </cols>
     <!-- DISPLAY TRANSECT ID -->
     <!-- DISPLAY PLANET NAME -->
     <author>
@@ -229,8 +232,6 @@
     <Bearing_Unit b="decimal">
       Bearing (degrees)
     </Bearing_Unit>
-    <!-- DIRECTION OF SURVEYOR -->
-    <!-- GRID TABLE FOR COUNT -->
     <cols>
       <From_Direction_Unit t="dropdown">
         From Direction
@@ -251,8 +252,6 @@
         </opts>
       </To_Direction_Unit>      
     </cols>
-    <New_Survey_Row t="button" lc="Row"/>
-    <Row_List t="list" ec="Row" />
     <Comment_on_unit>
       <desc>Comments about the unit including identifying "other" artefacts, glitches, explanation of field procedures, etc.</desc>
     </Comment_on_unit>
@@ -264,6 +263,10 @@
       <desc>Attach a screengrab using this feature. Can be uploaded from you device - locally via cloud software like Dropbox - or post fact.</desc>
     </Attach_a_Screengrab>
   </Survey_Procedure>
+  <Survey_Record>
+    <New_Survey_Row t="button" lc="Row"/>
+    <Row_List t="list" ec="Row" />
+  </Survey_Record>
   <Vegetation_and_Land_Use>
     <Dominant_Vegetation_Land_Use t="checkbox">
       Dominant vegetation and land use:
@@ -373,7 +376,10 @@
     <Revisit_Reason_Unit>
       If yes, explain briefly.
     </Revisit_Reason_Unit>
-    <!-- PUT END UNIT TIMESTAMP HERE? -->
+    <cols>
+      <EndTimestamp/>
+      <EndTimestampTrigger t="button"/>
+    </cols>    
     <Finish_Unit t="button" l="Control"/>
   </Revisit_Unit>
 </Unit>
@@ -395,7 +401,11 @@
 
 <logic>
   addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");
-  addOnEvent("Transect/General_Information/StopTimestampTrigger", "click", "setStopTimestamp()");
+  addOnEvent("Transect/Revisit/EndTimestampTrigger", "click", "setEndTimestamp()");
+  
+  addOnEvent("Unit/General_Information/StartTimestampTrigger", "click", "setStartTimestamp_Unit()");
+  addOnEvent("Unit/Revisit/EndTimestampTrigger", "click", "setEndTimestamp_Unit()");
+
 
 setTimestamp(String path) {
   setFieldValue(path, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z").format(new Date()));
@@ -407,8 +417,18 @@ setStartTimestamp() {
   setTimestamp(ref);
 }
 
-setStopTimestamp() {
-  String ref = "Transect/General_Information/StopTimestamp";
+setEndTimestamp() {
+  String ref = "Transect/General_Information/EndTimestamp";
+  setTimestamp(ref);
+}
+
+setStartTimestamp_Unit() {
+  String ref = "Unit/General_Information/StartTimestamp";
+  setTimestamp(ref);
+}
+
+setEndTimestamp_Unit() {
+  String ref = "Unit/Revisit/EndTimestamp";
   setTimestamp(ref);
 }
 
