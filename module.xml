@@ -174,7 +174,7 @@
 
 <Orbit>
   <Orbit>
-    <Orbit_Number b="decimal" f="id"/>
+    <Orbit_Number b="decimal" f="id notnull"/>
     <Agriculture />
     <Architecture />
     <Communications />
@@ -391,7 +391,7 @@
 
 <Row>
   <Row>
-    <Row_Number b="decimal" f="id"/>
+    <Row_Number b="decimal" f="id notnull"/>
     <Metal />
     <Sherd />
     <Lithic />
