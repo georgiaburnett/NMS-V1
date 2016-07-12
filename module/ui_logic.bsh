@@ -1364,8 +1364,8 @@ setStopTimestamp() {
 
 
   String searchQuery = "SELECT uuid, response "+
-                       "  FROM latestNonDeletedArchEntFormattedIdentifiers join createdmodifiedatby using (uuid)  "+                       
-                       " ORDER BY modifiedatgmt desc, response "+
+                       "  FROM latestNonDeletedArchEntFormattedIdentifiers join createdmodifiedatby using (uuid) "+                       
+                       " ORDER BY modifiedat desc, response "+
                        " LIMIT 10 "+
                        "OFFSET 0 ";
 
