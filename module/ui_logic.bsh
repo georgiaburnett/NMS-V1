@@ -644,7 +644,7 @@ validateTransect() {
   f.add(fieldPair("Transect/General_Information/Survey_Method", "{Survey_Method}"));
   f.add(fieldPair("Transect/General_Information/Predominant_Surface_Type", "{Predominant_Surface_Type}"));
   f.add(fieldPair("Transect/Survey_Procedure/Video_Capture_URL", "{Video_Capture_URL}"));
-  f.add(fieldPair("Transect/Revisit/Revisit", "{Revisit_}"));
+  f.add(fieldPair("Transect/Revisit/Revisit", "{Revisit}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -664,10 +664,10 @@ validateUnit() {
 
   f.add(fieldPair("Unit/General_Information/Unit_ID", "{Unit_ID}"));
   f.add(fieldPair("Unit/General_Information/Geotag_Unit", "{Geotag_Unit}"));
-  f.add(fieldPair("Unit/General_Information/Survey_State_Unit", "{Is_the_area___}"));
+  f.add(fieldPair("Unit/General_Information/Survey_State_Unit", "{Survey_State_Unit}"));
   f.add(fieldPair("Unit/Survey_Procedure/Video_Capture_URL", "{Video_Capture_URL}"));
-  f.add(fieldPair("Unit/Vegetation_and_Land_Use/Surface_Visibility", "{Surface_Visibility____}"));
-  f.add(fieldPair("Unit/Revisit_Unit/Revisit_Unit", "{Revisit_}"));
+  f.add(fieldPair("Unit/Vegetation_and_Land_Use/Surface_Visibility", "{Surface_Visibility}"));
+  f.add(fieldPair("Unit/Revisit_Unit/Revisit_Unit", "{Revisit_Unit}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -1677,92 +1677,7 @@ addOnEvent("Unit/Survey_Record/Row_List", "click", "loadEntity()");
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
 
-  addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");
-  addOnEvent("Transect/Revisit/EndTimestampTrigger", "click", "setEndTimestamp()");
   
-  addOnEvent("Unit/General_Information/StartTimestampTrigger", "click", "setStartTimestamp_Unit()");
-  addOnEvent("Unit/Revisit_Unit/EndTimestampTrigger", "click", "setEndTimestamp_Unit()");
-
-
-setTimestamp(String path) {
-  setFieldValue(path, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z").format(new Date()));
-}
-
-// Linked using @POSTPROC
-setStartTimestamp() {
-  String ref = "Transect/General_Information/StartTimestamp";
-  setTimestamp(ref);
-}
-
-setEndTimestamp() {
-  String ref = "Transect/Revisit/EndTimestamp";
-  setTimestamp(ref);
-}
-
-setStartTimestamp_Unit() {
-  String ref = "Unit/General_Information/StartTimestamp";
-  setTimestamp(ref);
-}
-
-setEndTimestamp_Unit() {
-  String ref = "Unit/Revisit_Unit/EndTimestamp";
-  setTimestamp(ref);
-}
-
-addOnEvent("Transect/General_Information", "show", "populateRecent()");
-addOnEvent("Control/Main/RecentEntities"   , "click" , "loadEntity();");
-
-
-populateRecent(){
-
-  String tabgroup = "Control";
-  String refEntityList  = tabgroup + "/Main/RecentEntities";
-
-
-  String searchQuery = "SELECT uuid, response "+
-                       "  FROM latestNonDeletedArchEntFormattedIdentifiers join createdmodifiedatby using (uuid) "+                       
-                       " ORDER BY modifiedat desc, response "+
-                       " LIMIT ? "+
-                       "OFFSET ? ";
-
-  populateCursorList(refEntityList, searchQuery, 5);
-  refreshTabgroupCSS(tabgroup);
-
-
-
-  Log.d("Module", "Search query: " + searchQuery);
-
-}
-
-
-newUnit(){
-  String tabgroup = "Unit";
-
-  String autoNumSource = "";
-  autoNumSource = getFieldValue("Control/Identifiers/Next_Unit_ID");
-  if (isNull(autoNumSource)) {
-    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
-    return;
-  }
-
-                
-              
-
-  setUuid(tabgroup, null);
-  newTabGroup(tabgroup);
-  populateAuthorAndTimestamp(tabgroup);
-  String autoNumDest = "";
-  autoNumDest = "Unit/General_Information/Unit_ID";
-  incAutoNum(autoNumDest);
-
-
-  setFieldValue("Unit/General_Information/Parent_Transect_ID", getFieldValue("Transect/General_Information/Transect_ID"));
-  setFieldValue("Unit/General_Information/Parent_Planet_Name", getFieldValue("Transect/General_Information/Planet_Name"));
-  
-}
-
-
-
 /******************************************************************************/
 /*                                    INIT                                    */
 /*                                                                            */

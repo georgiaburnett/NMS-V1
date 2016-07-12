@@ -17,15 +17,15 @@
 ./makeElement.sh Transect_General_Information_StartTimestampTrigger "StartTimestampTrigger" button 2 false false false false false .
 ./makeElement.sh Transect_General_Information_Transect_ID "Transect ID" input 1 false false true true false .
 ./makeElement.sh Transect_General_Information_Planet_Name "Planet Name" input 1 false false true true false .
-./makeElement.sh Transect_General_Information_author "Surveyor" input 1 false false true false true .
+./makeElement.sh Transect_General_Information_author "Author" input 1 false false true false true .
 ./makeElement.sh Transect_General_Information_Geotag "Geotag" input 1 false false true true false .
 ./makeElement.sh Transect_General_Information_Number_Of_Orbits "Number Of Orbits" input 1 false false true false false .
 ./makeElement.sh Transect_General_Information_Survey_Method "Survey Method" dropdown 1 false false true true false .
 ./makeElement.sh Transect_General_Information_Predominant_Surface_Type "Predominant Surface Type" dropdown 1 false false true true false .
 ./makeElement.sh Transect_General_Information_Number_of_Features "Number of Features" input 1 false false true false false .
 ./makeElement.sh Transect_General_Information_Location_and_description "Location and description" input 1 false false true false false .
-./makeElement.sh Transect_Survey_Procedure_Area_Surveyed "Area Surveyed (sq. km.)" input 1 false false true false false .
-./makeElement.sh Transect_Survey_Procedure_Bearing "Bearing (degrees)" input 1 false false true false false .
+./makeElement.sh Transect_Survey_Procedure_Area_Surveyed "Area Surveyed" input 1 false false true false false .
+./makeElement.sh Transect_Survey_Procedure_Bearing "Bearing" input 1 false false true false false .
 ./makeElement.sh Transect_Survey_Procedure_From_Direction "From Direction" dropdown 2 false false true false false .
 ./makeElement.sh Transect_Survey_Procedure_To_Direction "To Direction" dropdown 2 false false true false false .
 ./makeElement.sh Transect_Survey_Procedure_Comment_on_transect "Comment on transect" input 1 false false true false false .
@@ -36,13 +36,13 @@
 ./makeElement.sh Transect_Orbits_New_Orbit "New Orbit" button 1 false false false false false .
 ./makeElement.sh Transect_Orbits_Orbit_List "Orbit List" list 1 false false false false false .
 ./makeElement.sh Transect_Planetary_Coverage_Dominant_Planet_Coverage "Dominant Planet Coverage" checkbox 1 false false true false false .
-./makeElement.sh Transect_Planetary_Coverage_Dominant_Planet_Coverage_Other "If dominant planet coverage is 'other', please explain." input 1 false false true false false .
+./makeElement.sh Transect_Planetary_Coverage_Dominant_Planet_Coverage_Other "Dominant Planet Coverage Other" input 1 false false true false false .
 ./makeElement.sh Transect_Planetary_Coverage_Percentage_of_Visable_Surface "Percentage of Visable Surface" input 1 false false true false false .
 ./makeElement.sh Transect_Planetary_Coverage_Comment_on_planetary_coverage "Comment on planetary coverage" input 1 false false true false false .
 ./makeElement.sh Transect_Surface_Conditions_Comment_on_surface_conditions "Comment on surface conditions" input 1 false false true false false .
 ./makeElement.sh Transect_Surface_Conditions_Features "Features" input 1 false false true false false .
-./makeElement.sh Transect_Revisit_Revisit "Revisit?" radio 1 false false true true false .
-./makeElement.sh Transect_Revisit_Revisit_Reason "If yes, explain briefly." input 1 false false true false false .
+./makeElement.sh Transect_Revisit_Revisit "Revisit" radio 1 false false true true false .
+./makeElement.sh Transect_Revisit_Revisit_Reason "Revisit Reason" input 1 false false true false false .
 ./makeElement.sh Transect_Revisit_EndTimestamp "EndTimestamp" input 2 false false true false false .
 ./makeElement.sh Transect_Revisit_EndTimestampTrigger "EndTimestampTrigger" button 2 false false false false false .
 ./makeElement.sh Transect_Unit_New_Unit "New Unit" button 1 false false false false false .
@@ -65,16 +65,16 @@
 ./makeElement.sh Unit_General_Information_StartTimestampTrigger "StartTimestampTrigger" button 2 false false false false false .
 ./makeElement.sh Unit_General_Information_Parent_Transect_ID "Parent Transect ID" input 1 false false true false false .
 ./makeElement.sh Unit_General_Information_Parent_Planet_Name "Parent Planet Name" input 1 false false true false false .
-./makeElement.sh Unit_General_Information_author "Surveyor" input 1 false false true false true .
+./makeElement.sh Unit_General_Information_author "Author" input 1 false false true false true .
 ./makeElement.sh Unit_General_Information_Geotag_Unit "Geotag Unit" input 1 false false true true false .
 ./makeElement.sh Unit_General_Information_Survey_Procedure_Unit "Survey Procedure Unit" dropdown 1 false false true false false .
-./makeElement.sh Unit_General_Information_Survey_State_Unit "Is the area..." dropdown 1 false false true true false .
-./makeElement.sh Unit_General_Information_Number_of_Items_Unit "Number of Items" input 1 false false true false false .
-./makeElement.sh Unit_General_Information_Location_and_description_Unit "Location and description" input 1 false false true false false .
-./makeElement.sh Unit_Survey_Procedure_Area_Surveyed_Unit "Area Surveyed (sq. km.)" input 1 false false true false false .
-./makeElement.sh Unit_Survey_Procedure_Bearing_Unit "Bearing (degrees)" input 1 false false true false false .
-./makeElement.sh Unit_Survey_Procedure_From_Direction_Unit "From Direction" dropdown 2 false false true false false .
-./makeElement.sh Unit_Survey_Procedure_To_Direction_Unit "To Direction" dropdown 2 false false true false false .
+./makeElement.sh Unit_General_Information_Survey_State_Unit "Survey State Unit" dropdown 1 false false true true false .
+./makeElement.sh Unit_General_Information_Number_of_Items_Unit "Number of Items Unit" input 1 false false true false false .
+./makeElement.sh Unit_General_Information_Location_and_description_Unit "Location and description Unit" input 1 false false true false false .
+./makeElement.sh Unit_Survey_Procedure_Area_Surveyed_Unit "Area Surveyed Unit" input 1 false false true false false .
+./makeElement.sh Unit_Survey_Procedure_Bearing_Unit "Bearing Unit" input 1 false false true false false .
+./makeElement.sh Unit_Survey_Procedure_From_Direction_Unit "From Direction Unit" dropdown 2 false false true false false .
+./makeElement.sh Unit_Survey_Procedure_To_Direction_Unit "To Direction Unit" dropdown 2 false false true false false .
 ./makeElement.sh Unit_Survey_Procedure_Comment_on_unit "Comment on unit" input 1 false false true false false .
 ./makeElement.sh Unit_Survey_Procedure_Video_Capture_URL "Video Capture URL" input 1 false false true true false .
 ./makeElement.sh Unit_Survey_Procedure_Screengrab_Filename "Screengrab Filename" input 1 false false true false false .
@@ -82,10 +82,10 @@
 ./makeElement.sh Unit_Survey_Procedure_Button_Attach_a_Screengrab "Attach File" button 1 false false false false false .
 ./makeElement.sh Unit_Survey_Record_New_Survey_Row "New Survey Row" button 1 false false false false false .
 ./makeElement.sh Unit_Survey_Record_Row_List "Row List" list 1 false false false false false .
-./makeElement.sh Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Land_Use "Dominant vegetation and land use:" checkbox 1 false false true false false .
-./makeElement.sh Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Land_Use_Other "If vegetation or land use is 'other', please explain." input 1 false false true false false .
+./makeElement.sh Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Land_Use "Dominant Vegetation Land Use" checkbox 1 false false true false false .
+./makeElement.sh Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Land_Use_Other "Dominant Vegetation Land Use Other" input 1 false false true false false .
 ./makeElement.sh Unit_Vegetation_and_Land_Use_Dominant_Vegetation_Height "Dominant Vegetation Height" radio 1 false false true false false .
-./makeElement.sh Unit_Vegetation_and_Land_Use_Surface_Visibility "Surface Visibility (%)" radio 1 false false true true false .
+./makeElement.sh Unit_Vegetation_and_Land_Use_Surface_Visibility "Surface Visibility" radio 1 false false true true false .
 ./makeElement.sh Unit_Vegetation_and_Land_Use_Comment_on_vegetation_and_land_use "Comment on vegetation and land use" input 1 false false true false false .
 ./makeElement.sh Unit_Field_Conditions_Soil_Condition "Soil Condition" radio 1 false false true false false .
 ./makeElement.sh Unit_Field_Conditions_Background_Disturbance "Background Disturbance" radio 1 false false true false false .
@@ -96,8 +96,8 @@
 ./makeElement.sh Unit_Field_Conditions_Soil_Hue "Soil Hue" input 1 false false true false false .
 ./makeElement.sh Unit_Field_Conditions_Comment_on_field_conditions "Comment on field conditions" input 1 false false true false false .
 ./makeElement.sh Unit_Field_Conditions_Features_Unit "Features Unit" input 1 false false true false false .
-./makeElement.sh Unit_Revisit_Unit_Revisit_Unit "Revisit?" radio 1 false false true true false .
-./makeElement.sh Unit_Revisit_Unit_Revisit_Reason_Unit "If yes, explain briefly." input 1 false false true false false .
+./makeElement.sh Unit_Revisit_Unit_Revisit_Unit "Revisit Unit" radio 1 false false true true false .
+./makeElement.sh Unit_Revisit_Unit_Revisit_Reason_Unit "Revisit Reason Unit" input 1 false false true false false .
 ./makeElement.sh Unit_Revisit_Unit_EndTimestamp "EndTimestamp" input 2 false false true false false .
 ./makeElement.sh Unit_Revisit_Unit_EndTimestampTrigger "EndTimestampTrigger" button 2 false false false false false .
 ./makeElement.sh Unit_Revisit_Unit_Finish_Unit "Finish Unit" button 1 false false false false false .

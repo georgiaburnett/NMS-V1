@@ -291,7 +291,7 @@
         </select1>
       </group>
       <group ref="Search" faims_scrollable="false">
-        <label>{Records}</label>
+        <label>{search}</label>
         <group faims_style="orientation" ref="Colgroup_0">
           <label/>
           <group faims_style="even" ref="Col_0">
@@ -361,7 +361,7 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input ref="author" faims_attribute_name="Transect author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
-          <label>{Surveyor}</label>
+          <label>{author}</label>
         </input>
         <input faims_attribute_type="measure" ref="Geotag" faims_attribute_name="Geotag" faims_style_class="required">
           <label>{Geotag}</label>
@@ -397,11 +397,11 @@
       <group ref="Survey_Procedure">
         <label>{Survey_Procedure}</label>
         <input faims_attribute_type="measure" ref="Area_Surveyed" faims_attribute_name="Area Surveyed">
-          <label>{Area_Surveyed__sq__km__}</label>
+          <label>{Area_Surveyed}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Bearing" faims_attribute_name="Bearing">
-          <label>{Bearing__degrees_}</label>
+          <label>{Bearing}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
@@ -473,7 +473,7 @@
           </item>
         </select>
         <input faims_attribute_type="measure" ref="Dominant_Planet_Coverage_Other" faims_attribute_name="Dominant Planet Coverage Other">
-          <label>{If_dominant_planet_coverage_is__other___please_explain_}</label>
+          <label>{Dominant_Planet_Coverage_Other}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Percentage_of_Visable_Surface" faims_attribute_name="Percentage of Visable Surface">
@@ -499,14 +499,14 @@
       <group ref="Revisit">
         <label>{Revisit}</label>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Revisit" faims_attribute_name="Revisit" faims_style_class="required">
-          <label>{Revisit_}</label>
+          <label>{Revisit}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
         <input faims_attribute_type="measure" ref="Revisit_Reason" faims_attribute_name="Revisit Reason">
-          <label>{If_yes__explain_briefly_}</label>
+          <label>{Revisit_Reason}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
@@ -629,7 +629,7 @@
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input ref="author" faims_attribute_name="Unit author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
-          <label>{Surveyor}</label>
+          <label>{author}</label>
         </input>
         <input faims_attribute_type="measure" ref="Geotag_Unit" faims_attribute_name="Geotag Unit" faims_style_class="required">
           <label>{Geotag_Unit}</label>
@@ -643,29 +643,29 @@
           </item>
         </select1>
         <select1 faims_attribute_type="vocab" ref="Survey_State_Unit" faims_attribute_name="Survey State Unit" faims_style_class="required">
-          <label>{Is_the_area___}</label>
+          <label>{Survey_State_Unit}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
         <input faims_attribute_type="measure" ref="Number_of_Items_Unit" faims_attribute_name="Number of Items Unit">
-          <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{Number_of_Items}</label>
+          <label>{Number_of_Items_Unit}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Location_and_description_Unit" faims_attribute_name="Location and description Unit">
-          <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{Location_and_description}</label>
+          <label>{Location_and_description_Unit}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
       </group>
       <group ref="Survey_Procedure">
         <label>{Survey_Procedure}</label>
         <input faims_attribute_type="measure" ref="Area_Surveyed_Unit" faims_attribute_name="Area Surveyed Unit">
-          <label>{Area_Surveyed__sq__km__}</label>
+          <label>{Area_Surveyed_Unit}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <input faims_attribute_type="measure" ref="Bearing_Unit" faims_attribute_name="Bearing Unit">
-          <label>{Bearing__degrees_}</label>
+          <label>{Bearing_Unit}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
@@ -673,7 +673,7 @@
           <group ref="Col_0" faims_style="even">
             <label/>
             <select1 faims_attribute_type="vocab" ref="From_Direction_Unit" faims_attribute_name="From Direction Unit">
-              <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{From_Direction}</label>
+              <label>{From_Direction_Unit}</label>
               <item>
                 <label>Options not loaded</label>
                 <value>0</value>
@@ -683,7 +683,7 @@
           <group ref="Col_1" faims_style="even">
             <label/>
             <select1 faims_attribute_type="vocab" ref="To_Direction_Unit" faims_attribute_name="To Direction Unit">
-              <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{To_Direction}</label>
+              <label>{To_Direction_Unit}</label>
               <item>
                 <label>Options not loaded</label>
                 <value>0</value>
@@ -730,14 +730,14 @@
       <group ref="Vegetation_and_Land_Use">
         <label>{Vegetation_and_Land_Use}</label>
         <select faims_attribute_type="vocab" ref="Dominant_Vegetation_Land_Use" faims_attribute_name="Dominant Vegetation Land Use">
-          <label>{Dominant_vegetation_and_land_use_}</label>
+          <label>{Dominant_Vegetation_Land_Use}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select>
         <input faims_attribute_type="measure" ref="Dominant_Vegetation_Land_Use_Other" faims_attribute_name="Dominant Vegetation Land Use Other">
-          <label>{If_vegetation_or_land_use_is__other___please_explain_}</label>
+          <label>{Dominant_Vegetation_Land_Use_Other}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Dominant_Vegetation_Height" faims_attribute_name="Dominant Vegetation Height">
@@ -748,7 +748,7 @@
           </item>
         </select1>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Surface_Visibility" faims_attribute_name="Surface Visibility" faims_style_class="required">
-          <label>{Surface_Visibility____}</label>
+          <label>{Surface_Visibility}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
@@ -816,14 +816,14 @@
       <group ref="Revisit_Unit">
         <label>{Revisit_Unit}</label>
         <select1 appearance="full" faims_attribute_type="vocab" ref="Revisit_Unit" faims_attribute_name="Revisit Unit" faims_style_class="required">
-          <label>{Revisit_}</label>
+          <label>{Revisit_Unit}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
         <input faims_attribute_type="measure" ref="Revisit_Reason_Unit" faims_attribute_name="Revisit Reason Unit">
-          <label>{If_yes__explain_briefly_}</label>
+          <label>{Revisit_Reason_Unit}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <group ref="Colgroup_0" faims_style="orientation">
