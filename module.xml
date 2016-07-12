@@ -10,7 +10,7 @@
 </User>
 
 <Control f="nodata">
-  <Main>
+  <Main f="noscroll">
     <New_Transect t="button" l="Transect"/>
     <RecentEntities t="list"/>
     <!-- GET RID OF NEXT IDS? -->
