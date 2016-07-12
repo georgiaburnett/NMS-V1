@@ -277,7 +277,7 @@
     </group>
     <group ref="Control">
       <label>{Control}</label>
-      <group ref="Main">
+      <group ref="Main" faims_scrollable="false">
         <label>{Main}</label>
         <trigger ref="New_Transect">
           <label>{New_Transect}</label>
@@ -550,7 +550,7 @@
       <label>{Orbit}</label>
       <group ref="Orbit">
         <label>{Orbit}</label>
-        <input faims_attribute_type="measure" ref="Orbit_Number" faims_attribute_name="Orbit Number">
+        <input faims_attribute_type="measure" ref="Orbit_Number" faims_attribute_name="Orbit Number" faims_style_class="required">
           <label>{Orbit_Number}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
@@ -851,7 +851,7 @@
       <label>{Row}</label>
       <group ref="Row">
         <label>{Row}</label>
-        <input faims_attribute_type="measure" ref="Row_Number" faims_attribute_name="Row Number">
+        <input faims_attribute_type="measure" ref="Row_Number" faims_attribute_name="Row Number" faims_style_class="required">
           <label>{Row_Number}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>

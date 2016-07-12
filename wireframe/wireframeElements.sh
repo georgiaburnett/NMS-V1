@@ -49,7 +49,7 @@
 ./makeElement.sh Transect_Unit_Next_Transect_ID "Next Transect ID" input 1 false false false true false .
 ./makeElement.sh Transect_Unit_Next_Unit_ID "Next Unit ID" input 1 false false false true false .
 ./makeElement.sh Transect_Unit_Unit_List "Unit List" list 1 false false false false false .
-./makeElement.sh Orbit_Orbit_Orbit_Number "Orbit Number" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Orbit_Number "Orbit Number" input 1 false false true true false .
 ./makeElement.sh Orbit_Orbit_Agriculture "Agriculture" input 1 false false true false false .
 ./makeElement.sh Orbit_Orbit_Architecture "Architecture" input 1 false false true false false .
 ./makeElement.sh Orbit_Orbit_Communications "Communications" input 1 false false true false false .
@@ -101,7 +101,7 @@
 ./makeElement.sh Unit_Revisit_Unit_EndTimestamp "EndTimestamp" input 2 false false true false false .
 ./makeElement.sh Unit_Revisit_Unit_EndTimestampTrigger "EndTimestampTrigger" button 2 false false false false false .
 ./makeElement.sh Unit_Revisit_Unit_Finish_Unit "Finish Unit" button 1 false false false false false .
-./makeElement.sh Row_Row_Row_Number "Row Number" input 1 false false true false false .
+./makeElement.sh Row_Row_Row_Number "Row Number" input 1 false false true true false .
 ./makeElement.sh Row_Row_Metal "Metal" input 1 false false true false false .
 ./makeElement.sh Row_Row_Sherd "Sherd" input 1 false false true false false .
 ./makeElement.sh Row_Row_Lithic "Lithic" input 1 false false true false false .

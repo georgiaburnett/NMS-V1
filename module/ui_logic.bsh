@@ -650,6 +650,15 @@ validateTransect() {
   showWarning("Validation Results", validationMessage);
 }
 
+validateOrbit() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Orbit/Orbit/Orbit_Number", "{Orbit_Number}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
 validateUnit() {
   List f = new ArrayList(); // Fields to be validated
 
@@ -659,6 +668,15 @@ validateUnit() {
   f.add(fieldPair("Unit/Survey_Procedure/Video_Capture_URL", "{Video_Capture_URL}"));
   f.add(fieldPair("Unit/Vegetation_and_Land_Use/Surface_Visibility", "{Surface_Visibility____}"));
   f.add(fieldPair("Unit/Revisit_Unit/Revisit_Unit", "{Revisit_}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("Validation Results", validationMessage);
+}
+
+validateRow() {
+  List f = new ArrayList(); // Fields to be validated
+
+  f.add(fieldPair("Row/Row/Row_Number", "{Row_Number}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("Validation Results", validationMessage);
@@ -850,7 +868,9 @@ addNavigationButtons(String tabgroup) {
   removeNavigationButtons();
   List tabgroupsToValidate = new ArrayList();
   tabgroupsToValidate.add("Transect");
+  tabgroupsToValidate.add("Orbit");
   tabgroupsToValidate.add("Unit");
+  tabgroupsToValidate.add("Row");
 
   addNavigationButton("new", new ActionButtonCallback() {
     actionOnLabel() {
@@ -1701,10 +1721,10 @@ setEndTimestamp_Unit() {
   String searchQuery = "SELECT uuid, response "+
                        "  FROM latestNonDeletedArchEntFormattedIdentifiers join createdmodifiedatby using (uuid) "+                       
                        " ORDER BY modifiedat desc, response "+
-                       " LIMIT 10 "+
-                       "OFFSET 0 ";
+                       " LIMIT ? "+
+                       "OFFSET ? ";
 
-  populateCursorList(refEntityList, searchQuery, 25);
+  populateCursorList(refEntityList, searchQuery, 5);
   refreshTabgroupCSS(tabgroup);
   }
 
