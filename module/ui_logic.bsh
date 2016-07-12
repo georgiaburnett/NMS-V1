@@ -1709,6 +1709,31 @@ setEndTimestamp_Unit() {
   }
 
 
+newUnit(){
+  String tabgroup = "Unit";
+
+  String autoNumSource = "";
+  autoNumSource = getFieldValue("Control/Identifiers/Next_Unit_ID");
+  if (isNull(autoNumSource)) {
+    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
+
+                
+              
+
+  setUuid(tabgroup, null);
+  newTabGroup(tabgroup);
+  populateAuthorAndTimestamp(tabgroup);
+  String autoNumDest = "";
+  autoNumDest = "Unit/General_Information/Unit_ID";
+  incAutoNum(autoNumDest);
+
+
+  setFieldValue("Unit/General_Information/Parent_Transect_ID", getFieldValue("Transect/General_Information/Transect_ID"));
+  setFieldValue("Unit/General_Information/Parent_Planet_Name", getFieldValue("Transect/General_Information/Planet_Name"));
+  
+}
 
 
 
