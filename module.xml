@@ -77,6 +77,25 @@
     <Bearing b="decimal">
       Bearing (degrees)
     </Bearing>
+    <cols>
+      <FromDir t="dropdown">
+        <opts>
+          <opt>E</opt>
+          <opt>N</opt>
+          <opt>S</opt>
+          <opt>W</opt>
+        </opts>
+      </FromDir>
+      <ToDir t="dropdown">
+        <opts>
+          <opt>E</opt>
+          <opt>N</opt>
+          <opt>S</opt>
+          <opt>W</opt>
+        </opts>
+      </ToDir>      
+    </cols>
+
     <!-- DIRECTION OF SURVEYOR -->
     <!-- GRID TABLE FOR FEATURES -->
     <Comment_on_transect>
@@ -90,6 +109,10 @@
       <desc>Attach a screengrab using this feature. Can be uploaded from you device - locally via cloud software like Dropbox - or post fact.</desc>
     </Attach_a_Screengrab>
   </Survey_Procedure>
+  <OrbitalCoverage>
+    <NewOrbit t="Button" lc="Orbit"/>
+    <OrbitList t="list" ec="Orbit" />
+  </OrbitalCoverage>
   <Planetary_Coverage>
     <Dominant_Planet_Coverage t="checkbox">
       <desc>Check as many as apply.</desc>
@@ -154,6 +177,16 @@
     <autonum/>
   </Unit>
 </Transect>
+<Orbit>
+  <OrbitNumber t="radio" f="id">
+    <opts>
+      <opt>1</opt>
+      <opt>2</opt>
+      <opt>3</opt>
+      <opt>4</opt>
+      <opt>5</opt>
+    </opts>
+  </OrbitNumber>
 
 <Unit>
   <General_Information>
@@ -326,7 +359,7 @@
 
 <logic>
   addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");
-  //addOnEvent("Transect/General_Information/StopTimestampTrigger", "click", "setStopTimestamp()");
+  addOnEvent("Transect/General_Information/StopTimestampTrigger", "click", "setStopTimestamp()");
 
 setTimestamp(String path) {
   setFieldValue(path, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z").format(new Date()));
