@@ -1709,10 +1709,11 @@ setEndTimestamp_Unit() {
   setTimestamp(ref);
 }
 
-  addOnEvent("Transect/General_Information", "show", "populateRecent()");
+addOnEvent("Transect/General_Information", "show", "populateRecent()");
+addOnEvent("Control/Main/RecentEntities"   , "click" , "loadEntity();");
 
 
-  populateRecent(){
+populateRecent(){
 
   String tabgroup = "Control";
   String refEntityList  = tabgroup + "/Main/RecentEntities";
@@ -1726,7 +1727,12 @@ setEndTimestamp_Unit() {
 
   populateCursorList(refEntityList, searchQuery, 5);
   refreshTabgroupCSS(tabgroup);
-  }
+
+
+
+  Log.d("Module", "Search query: " + searchQuery);
+
+}
 
 
 newUnit(){
