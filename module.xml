@@ -240,7 +240,7 @@
           <opt>S</opt>
           <opt>W</opt>
         </opts>
-      </FromDir>
+      </From_Direction>
       <To_Direction t="dropdown">
         <opts>
           <opt>E</opt>
@@ -248,7 +248,7 @@
           <opt>S</opt>
           <opt>W</opt>
         </opts>
-      </ToDir>      
+      </To_Direction>      
     </cols>
     <New_Survey_Row t="Button" lc="Row"/>
     <Row_List t="list" ec="Row" />
