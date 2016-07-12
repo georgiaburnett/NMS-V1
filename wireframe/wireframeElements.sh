@@ -26,6 +26,9 @@
 ./makeElement.sh Transect_General_Information_Location_and_description "Location and description" input 1 false false true false false .
 ./makeElement.sh Transect_Survey_Procedure_Area_Surveyed "Area Surveyed (sq. km.)" input 1 false false true false false .
 ./makeElement.sh Transect_Survey_Procedure_Bearing "Bearing (degrees)" input 1 false false true false false .
+./makeElement.sh Transect_Survey_Procedure_From_Direction "From Direction" dropdown 2 false false true false false .
+./makeElement.sh Transect_Survey_Procedure_To_Direction "To Direction" dropdown 2 false false true false false .
+./makeElement.sh Transect_Survey_Procedure_Orbit_List "Orbit List" list 1 false false false false false .
 ./makeElement.sh Transect_Survey_Procedure_Comment_on_transect "Comment on transect" input 1 false false true false false .
 ./makeElement.sh Transect_Survey_Procedure_Video_Capture_URL "Video Capture URL" input 1 false false true true false .
 ./makeElement.sh Transect_Survey_Procedure_Screengrab_Filename "Screengrab Filename" input 1 false false true false false .
@@ -44,6 +47,18 @@
 ./makeElement.sh Transect_Unit_New_Unit "New Unit" button 1 false false false false false .
 ./makeElement.sh Transect_Unit_Next_Transect_ID "Next Transect ID" input 1 false false false true false .
 ./makeElement.sh Transect_Unit_Next_Unit_ID "Next Unit ID" input 1 false false false true false .
+./makeElement.sh Transect_Unit_Unit_List "Unit List" list 1 false false false false false .
+./makeElement.sh Orbit_Orbit_Orbit_Number "Orbit Number" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Agriculture "Agriculture" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Architecture "Architecture" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Communications "Communications" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Cultural "Cultural" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Industry "Industry" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Military "Military" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Mining "Mining" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Transport "Transport" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Settlement "Settlement" input 1 false false true false false .
+./makeElement.sh Orbit_Orbit_Other "Other" input 1 false false true false false .
 ./makeElement.sh Unit_General_Information_Unit_ID "Unit ID" input 1 false false true true false .
 ./makeElement.sh Unit_General_Information_author "Surveyor" input 1 false false true false true .
 ./makeElement.sh Unit_General_Information_Geotag_Unit "Geotag" input 1 false false true true false .
@@ -53,6 +68,9 @@
 ./makeElement.sh Unit_General_Information_Location_and_description_Unit "Location and description" input 1 false false true false false .
 ./makeElement.sh Unit_Survey_Procedure_Area_Surveyed_Unit "Area Surveyed (sq. km.)" input 1 false false true false false .
 ./makeElement.sh Unit_Survey_Procedure_Bearing_Unit "Bearing (degrees)" input 1 false false true false false .
+./makeElement.sh Unit_Survey_Procedure_From_Direction_Unit "From Direction" dropdown 2 false false true false false .
+./makeElement.sh Unit_Survey_Procedure_To_Direction_Unit "To Direction" dropdown 2 false false true false false .
+./makeElement.sh Unit_Survey_Procedure_Row_List "Row List" list 1 false false false false false .
 ./makeElement.sh Unit_Survey_Procedure_Comment_on_unit "Comment on unit" input 1 false false true false false .
 ./makeElement.sh Unit_Survey_Procedure_Video_Capture_URL "Video Capture URL" input 1 false false true true false .
 ./makeElement.sh Unit_Survey_Procedure_Screengrab_Filename "Screengrab Filename" input 1 false false true false false .
@@ -75,3 +93,13 @@
 ./makeElement.sh Unit_Revisit_Unit_Revisit_Unit "Revisit?" radio 1 false false true true false .
 ./makeElement.sh Unit_Revisit_Unit_Revisit_Reason_Unit "If yes, explain briefly." input 1 false false true false false .
 ./makeElement.sh Unit_Revisit_Unit_Finish_Unit "Finish Unit" button 1 false false false false false .
+./makeElement.sh Row_Row_Row_Number "Row Number" input 1 false false true false false .
+./makeElement.sh Row_Row_Metal "Metal" input 1 false false true false false .
+./makeElement.sh Row_Row_Sherd "Sherd" input 1 false false true false false .
+./makeElement.sh Row_Row_Lithic "Lithic" input 1 false false true false false .
+./makeElement.sh Row_Row_Technology "Technology" input 1 false false true false false .
+./makeElement.sh Row_Row_Structure "Structure" input 1 false false true false false .
+./makeElement.sh Row_Row_Wreck "Wreck" input 1 false false true false false .
+./makeElement.sh Row_Row_Monolith "Monolith" input 1 false false true false false .
+./makeElement.sh Row_Row_Settlement "Settlement" input 1 false false true false false .
+./makeElement.sh Row_Row_Other "Other" input 1 false false true false false .
