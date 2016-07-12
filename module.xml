@@ -404,7 +404,7 @@
   addOnEvent("Transect/Revisit/EndTimestampTrigger", "click", "setEndTimestamp()");
   
   addOnEvent("Unit/General_Information/StartTimestampTrigger", "click", "setStartTimestamp_Unit()");
-  addOnEvent("Unit/Revisit/EndTimestampTrigger", "click", "setEndTimestamp_Unit()");
+  addOnEvent("Unit/Revisit_Unit/EndTimestampTrigger", "click", "setEndTimestamp_Unit()");
 
 
 setTimestamp(String path) {
@@ -418,7 +418,7 @@ setStartTimestamp() {
 }
 
 setEndTimestamp() {
-  String ref = "Transect/General_Information/EndTimestamp";
+  String ref = "Transect/Revisit/EndTimestamp";
   setTimestamp(ref);
 }
 
@@ -428,7 +428,7 @@ setStartTimestamp_Unit() {
 }
 
 setEndTimestamp_Unit() {
-  String ref = "Unit/Revisit/EndTimestamp";
+  String ref = "Unit/Revisit_Unit/EndTimestamp";
   setTimestamp(ref);
 }
 
