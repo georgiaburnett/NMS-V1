@@ -17,7 +17,6 @@
   </Main>
   <search>
     Records
-    <!-- DISPLAY (RECENT?) RECORDS AS TRANSECT [ID]-UNIT [ID]-PLANET NAME -->
   </search>
   <Identifiers>
     <autonum/>
@@ -30,8 +29,6 @@
       <StartTimestamp/>
       <StartTimestampTrigger t="button"/>
     </cols>
-    <!-- PUT START TRANSECT TIMESTAMP HERE-->
-    <!-- PUT END TRANSECT TIMESTAMP HERE -->
     <Transect_ID f="id autonum notnull">
       <str>
         <pos>1</pos>
@@ -235,7 +232,8 @@
     <!-- DIRECTION OF SURVEYOR -->
     <!-- GRID TABLE FOR COUNT -->
     <cols>
-      <From_Direction t="dropdown">
+      <From_Direction_Unit t="dropdown">
+        From Direction
         <opts>
           <opt>E</opt>
           <opt>N</opt>
@@ -243,7 +241,8 @@
           <opt>W</opt>
         </opts>
       </From_Direction>
-      <To_Direction t="dropdown">
+      <To_Direction_Unit t="dropdown">
+        To Direction
         <opts>
           <opt>E</opt>
           <opt>N</opt>
