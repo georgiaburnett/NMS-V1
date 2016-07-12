@@ -221,7 +221,7 @@
       Surveyor
     </author>
     <Geotag_Unit f="notnull">
-      <label>Geotag</label>
+      Geotag
       <desc>This will be updated as we figure out how NMS uses co-ordinates, location, etc. Stay tuned!</desc>
     </Geotag_Unit>
     <Survey_Procedure_Unit t="dropdown">
@@ -241,7 +241,7 @@
       Number of Items
     </Number_of_Items_Unit>
     <Location_and_description_Unit>
-      Location and description
+      Location and Description
       <desc>This could include access, relation to other units, land use etc.</desc>
     </Location_and_description_Unit>
   </General_Information>
