@@ -251,7 +251,7 @@
         </opts>
       </To_Direction_Unit>      
     </cols>
-    <New_Survey_Row t="Button" lc="Row"/>
+    <New_Survey_Row t="button" lc="Row"/>
     <Row_List t="list" ec="Row" />
     <Comment_on_unit>
       <desc>Comments about the unit including identifying "other" artefacts, glitches, explanation of field procedures, etc.</desc>
