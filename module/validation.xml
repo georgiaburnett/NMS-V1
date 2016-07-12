@@ -37,6 +37,7 @@
       </validator>
     </property>
   </ArchaeologicalElement>
+  <ArchaeologicalElement name="Orbit"/>
   <ArchaeologicalElement name="Unit">
     <property name="Unit ID">
       <validator type="blankchecker">
@@ -69,4 +70,5 @@
       </validator>
     </property>
   </ArchaeologicalElement>
+  <ArchaeologicalElement name="Row"/>
 </ValidationSchema>
