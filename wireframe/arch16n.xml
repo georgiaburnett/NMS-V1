@@ -66,7 +66,7 @@
 <arch16n k="{Enable_Internal_GPS}"><![CDATA[Enable Internal GPS]]></arch16n>
 <arch16n k="{Enable_Sync}"><![CDATA[Enable Sync]]></arch16n>
 <arch16n k="{EndTimestamp}"><![CDATA[EndTimestamp]]></arch16n>
-<arch16n k="{EndTimestampTimestampTrigger}"><![CDATA[EndTimestampTimestampTrigger]]></arch16n>
+<arch16n k="{EndTimestampTrigger}"><![CDATA[EndTimestampTrigger]]></arch16n>
 <arch16n k="{Entity_List}"><![CDATA[Entity List]]></arch16n>
 <arch16n k="{Entity_Types}"><![CDATA[Entity Types]]></arch16n>
 <arch16n k="{External_GPS_Disabled}"><![CDATA[External GPS Disabled]]></arch16n>
@@ -85,6 +85,7 @@
 <arch16n k="{Gas}"><![CDATA[Gas]]></arch16n>
 <arch16n k="{General_Information}"><![CDATA[General Information]]></arch16n>
 <arch16n k="{Geotag}"><![CDATA[Geotag]]></arch16n>
+<arch16n k="{Geotag_Unit}"><![CDATA[Geotag Unit]]></arch16n>
 <arch16n k="{GPS_is_no_longer_initialised}"><![CDATA[GPS is No Longer Initialised]]></arch16n>
 <arch16n k="{GPS_is_not_initialised}"><![CDATA[GPS is Not Initialised]]></arch16n>
 <arch16n k="{GPS_Not_Initialised}"><![CDATA[GPS Not Initialised]]></arch16n>
@@ -145,9 +146,12 @@
 <arch16n k="{Orbit_List}"><![CDATA[Orbit List]]></arch16n>
 <arch16n k="{Orbit_Number}"><![CDATA[Orbit Number]]></arch16n>
 <arch16n k="{Orbit}"><![CDATA[Orbit]]></arch16n>
+<arch16n k="{Orbits}"><![CDATA[Orbits]]></arch16n>
 <arch16n k="{Other_life}"><![CDATA[Other life]]></arch16n>
 <arch16n k="{Other}"><![CDATA[Other]]></arch16n>
 <arch16n k="{Over_head}"><![CDATA[Over-head]]></arch16n>
+<arch16n k="{Parent_Planet_Name}"><![CDATA[Parent Planet Name]]></arch16n>
+<arch16n k="{Parent_Transect_ID}"><![CDATA[Parent Transect ID]]></arch16n>
 <arch16n k="{Peaceful_}"><![CDATA[Peaceful?]]></arch16n>
 <arch16n k="{Percentage_of_Visable_Surface}"><![CDATA[Percentage of Visable Surface]]></arch16n>
 <arch16n k="{Plains}"><![CDATA[Plains]]></arch16n>
@@ -195,6 +199,7 @@
 <arch16n k="{Surveyor}"><![CDATA[Surveyor]]></arch16n>
 <arch16n k="{Survey_Procedure}"><![CDATA[Survey Procedure]]></arch16n>
 <arch16n k="{Survey_Procedure_Unit}"><![CDATA[Survey Procedure Unit]]></arch16n>
+<arch16n k="{Survey_Record}"><![CDATA[Survey Record]]></arch16n>
 <arch16n k="{Sync_Disabled}"><![CDATA[Sync Disabled]]></arch16n>
 <arch16n k="{Sync_Enabled}"><![CDATA[Sync Enabled]]></arch16n>
 <arch16n k="{Take_From_GPS}"><![CDATA[Take From GPS]]></arch16n>

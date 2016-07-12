@@ -75,14 +75,16 @@
                   <To_Direction/>
                 </Col_1>
               </Colgroup_0>
-              <New_Orbit/>
-              <Orbit_List/>
               <Comment_on_transect/>
               <Video_Capture_URL/>
               <Screengrab_Filename/>
               <Attach_a_Screengrab/>
               <Button_Attach_a_Screengrab/>
             </Survey_Procedure>
+            <Orbits>
+              <New_Orbit/>
+              <Orbit_List/>
+            </Orbits>
             <Planetary_Coverage>
               <Dominant_Planet_Coverage/>
               <Dominant_Planet_Coverage_Other/>
@@ -101,7 +103,7 @@
                   <EndTimestamp/>
                 </Col_0>
                 <Col_1>
-                  <EndTimestampTimestampTrigger/>
+                  <EndTimestampTrigger/>
                 </Col_1>
               </Colgroup_0>
             </Revisit>
@@ -130,6 +132,16 @@
           <Unit>
             <General_Information>
               <Unit_ID/>
+              <Colgroup_0>
+                <Col_0>
+                  <StartTimestamp/>
+                </Col_0>
+                <Col_1>
+                  <StartTimestampTrigger/>
+                </Col_1>
+              </Colgroup_0>
+              <Parent_Transect_ID/>
+              <Parent_Planet_Name/>
               <author/>
               <Geotag_Unit/>
               <Survey_Procedure_Unit/>
@@ -148,14 +160,16 @@
                   <To_Direction_Unit/>
                 </Col_1>
               </Colgroup_0>
-              <New_Survey_Row/>
-              <Row_List/>
               <Comment_on_unit/>
               <Video_Capture_URL/>
               <Screengrab_Filename/>
               <Attach_a_Screengrab/>
               <Button_Attach_a_Screengrab/>
             </Survey_Procedure>
+            <Survey_Record>
+              <New_Survey_Row/>
+              <Row_List/>
+            </Survey_Record>
             <Vegetation_and_Land_Use>
               <Dominant_Vegetation_Land_Use/>
               <Dominant_Vegetation_Land_Use_Other/>
@@ -177,6 +191,14 @@
             <Revisit_Unit>
               <Revisit_Unit/>
               <Revisit_Reason_Unit/>
+              <Colgroup_0>
+                <Col_0>
+                  <EndTimestamp/>
+                </Col_0>
+                <Col_1>
+                  <EndTimestampTrigger/>
+                </Col_1>
+              </Colgroup_0>
               <Finish_Unit/>
             </Revisit_Unit>
           </Unit>
@@ -405,17 +427,6 @@
             </select1>
           </group>
         </group>
-        <Button ref="New_Orbit" faims_attribute_name="New Orbit">
-          <label>{New_Orbit}</label>
-          <!--WARNING: This view was created from an element whose t attribute's value is unexpected-->
-        </Button>
-        <select1 appearance="compact" ref="Orbit_List" faims_annotation="false" faims_certainty="false">
-          <label>{Orbit_List}</label>
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
         <input faims_attribute_type="measure" ref="Comment_on_transect" faims_attribute_name="Comment on transect">
           <label>{Comment_on_transect}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -438,6 +449,19 @@
         <trigger ref="Button_Attach_a_Screengrab">
           <label>{Button_Attach_a_Screengrab}</label>
         </trigger>
+      </group>
+      <group ref="Orbits">
+        <label>{Orbits}</label>
+        <trigger ref="New_Orbit">
+          <label>{New_Orbit}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Orbit_List" faims_annotation="false" faims_certainty="false">
+          <label>{Orbit_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
       </group>
       <group ref="Planetary_Coverage">
         <label>{Planetary_Coverage}</label>
@@ -496,8 +520,8 @@
           </group>
           <group ref="Col_1" faims_style="even">
             <label/>
-            <trigger ref="EndTimestampTimestampTrigger">
-              <label>{EndTimestampTimestampTrigger}</label>
+            <trigger ref="EndTimestampTrigger">
+              <label>{EndTimestampTrigger}</label>
             </trigger>
           </group>
         </group>
@@ -580,11 +604,35 @@
           <label>{Unit_ID}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="StartTimestamp" faims_attribute_name="StartTimestamp">
+              <label>{StartTimestamp}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <trigger ref="StartTimestampTrigger">
+              <label>{StartTimestampTrigger}</label>
+            </trigger>
+          </group>
+        </group>
+        <input faims_attribute_type="measure" ref="Parent_Transect_ID" faims_attribute_name="Parent Transect ID">
+          <label>{Parent_Transect_ID}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
+        <input faims_attribute_type="measure" ref="Parent_Planet_Name" faims_attribute_name="Parent Planet Name">
+          <label>{Parent_Planet_Name}</label>
+          <!--WARNING: No type t was given for this view; assuming it is an input-->
+        </input>
         <input ref="author" faims_attribute_name="Unit author" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
           <label>{Surveyor}</label>
         </input>
         <input faims_attribute_type="measure" ref="Geotag_Unit" faims_attribute_name="Geotag Unit" faims_style_class="required">
-          <label><!--WARNING: For this element, a label was explicitly given. It may have been able to be represented more succinctly by allowing it to be inferred from its element's tag-->{Geotag}</label>
+          <label>{Geotag_Unit}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
         <select1 faims_attribute_type="vocab" ref="Survey_Procedure_Unit" faims_attribute_name="Survey Procedure Unit">
@@ -643,17 +691,6 @@
             </select1>
           </group>
         </group>
-        <Button ref="New_Survey_Row" faims_attribute_name="New Survey Row">
-          <label>{New_Survey_Row}</label>
-          <!--WARNING: This view was created from an element whose t attribute's value is unexpected-->
-        </Button>
-        <select1 appearance="compact" ref="Row_List" faims_annotation="false" faims_certainty="false">
-          <label>{Row_List}</label>
-          <item>
-            <label>Options not loaded</label>
-            <value>0</value>
-          </item>
-        </select1>
         <input faims_attribute_type="measure" ref="Comment_on_unit" faims_attribute_name="Comment on unit">
           <label>{Comment_on_unit}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
@@ -676,6 +713,19 @@
         <trigger ref="Button_Attach_a_Screengrab">
           <label>{Button_Attach_a_Screengrab}</label>
         </trigger>
+      </group>
+      <group ref="Survey_Record">
+        <label>{Survey_Record}</label>
+        <trigger ref="New_Survey_Row">
+          <label>{New_Survey_Row}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Row_List" faims_annotation="false" faims_certainty="false">
+          <label>{Row_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
       </group>
       <group ref="Vegetation_and_Land_Use">
         <label>{Vegetation_and_Land_Use}</label>
@@ -776,6 +826,22 @@
           <label>{If_yes__explain_briefly_}</label>
           <!--WARNING: No type t was given for this view; assuming it is an input-->
         </input>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input faims_attribute_type="measure" ref="EndTimestamp" faims_attribute_name="EndTimestamp">
+              <label>{EndTimestamp}</label>
+              <!--WARNING: No type t was given for this view; assuming it is an input-->
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <trigger ref="EndTimestampTrigger">
+              <label>{EndTimestampTrigger}</label>
+            </trigger>
+          </group>
+        </group>
         <trigger ref="Finish_Unit">
           <label>{Finish_Unit}</label>
         </trigger>
