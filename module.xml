@@ -449,10 +449,10 @@ setEndTimestamp_Unit() {
   String searchQuery = "SELECT uuid, response "+
                        "  FROM latestNonDeletedArchEntFormattedIdentifiers join createdmodifiedatby using (uuid) "+                       
                        " ORDER BY modifiedat desc, response "+
-                       " LIMIT 10 "+
-                       "OFFSET 0 ";
+                       " LIMIT ? "+
+                       "OFFSET ? ";
 
-  populateCursorList(refEntityList, searchQuery, 25);
+  populateCursorList(refEntityList, searchQuery, 5);
   refreshTabgroupCSS(tabgroup);
   }
 
