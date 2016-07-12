@@ -16,7 +16,7 @@
     <!-- GET RID OF NEXT IDS? -->
   </Main>
   <search>
-    Records
+    <label>Records</label>
   </search>
   <Identifiers>
     <autonum/>
@@ -42,7 +42,7 @@
       </str>
     </Planet_Name>
     <author>
-      Surveyor
+      <label>Surveyor</label>
     </author>
     <Geotag f="notnull">
       <desc>This will be updated as we figure out how NMS uses co-ordinates, location, etc. Stay tuned!</desc>
@@ -69,10 +69,10 @@
   </General_Information>
   <Survey_Procedure>
     <Area_Surveyed b="decimal">
-      Area Surveyed (sq. km.)
+      <label>Area Surveyed (sq. km.)</label>
     </Area_Surveyed>
     <Bearing b="decimal">
-      Bearing (degrees)
+      <label>Bearing (degrees)</label>
     </Bearing>
     <cols>
       <From_Direction t="dropdown">
@@ -132,7 +132,7 @@
       </opts>
     </Dominant_Planet_Coverage>
     <Dominant_Planet_Coverage_Other>
-      If dominant planet coverage is 'other', please explain.
+      <label>If dominant planet coverage is 'other', please explain.</label>
     </Dominant_Planet_Coverage_Other>
     <Percentage_of_Visable_Surface b="decimal">
       <desc>Percentage of surface visiable from orbiting altitude.</desc>
@@ -151,14 +151,14 @@
   </Surface_Conditions>
   <Revisit>
     <Revisit t="radio" f="notnull">
-      Revisit?
+      <label>Revisit?</label>
       <opts>
         <opt>Yes</opt>
         <opt>No</opt>
       </opts>
     </Revisit>
     <Revisit_Reason>
-      If yes, explain briefly.
+      <label>If yes, explain briefly.</label>
     </Revisit_Reason>
     <cols>
       <EndTimestamp/>
@@ -218,7 +218,7 @@
       </str>      
     </Parent_Planet_Name>
     <author>
-      Surveyor
+      <label>Surveyor</label>
     </author>
     <Geotag_Unit f="notnull">
       <label>Geotag</label>
@@ -231,30 +231,30 @@
       </opts>
     </Survey_Procedure_Unit>
     <Survey_State_Unit t="dropdown" f="notnull">
-      Is the area...
+      <label>Is the area...</label>
       <opts>
         <opt>Unsurveyed</opt>
         <opt>Resurveyed</opt>
       </opts>
     </Survey_State_Unit>
     <Number_of_Items_Unit b="decimal">
-      Number of Items
+      <label>Number of Items</label>
     </Number_of_Items_Unit>
     <Location_and_description_Unit>
-      Location and description
+      <label>Location and description</label>
       <desc>This could include access, relation to other units, land use etc.</desc>
     </Location_and_description_Unit>
   </General_Information>
   <Survey_Procedure>
     <Area_Surveyed_Unit b="decimal">
-      Area Surveyed (sq. km.)
+      <label>Area Surveyed (sq. km.)</label>
     </Area_Surveyed_Unit>
     <Bearing_Unit b="decimal">
-      Bearing (degrees)
+      <label>Bearing (degrees)</label>
     </Bearing_Unit>
     <cols>
       <From_Direction_Unit t="dropdown">
-        From Direction
+        <label>From Direction</label>
         <opts>
           <opt>E</opt>
           <opt>N</opt>
@@ -263,7 +263,7 @@
         </opts>
       </From_Direction_Unit>
       <To_Direction_Unit t="dropdown">
-        To Direction
+        <label>To Direction</label>
         <opts>
           <opt>E</opt>
           <opt>N</opt>
@@ -289,7 +289,7 @@
   </Survey_Record>
   <Vegetation_and_Land_Use>
     <Dominant_Vegetation_Land_Use t="checkbox">
-      Dominant vegetation and land use:
+      <label>Dominant vegetation and land use:</label>
       <desc>Check all that apply.</desc>
       <opts>
         <opt>Coniferous</opt>
@@ -303,7 +303,7 @@
       </opts>
     </Dominant_Vegetation_Land_Use>
     <Dominant_Vegetation_Land_Use_Other>
-      If vegetation or land use is 'other', please explain.
+      <label>If vegetation or land use is 'other', please explain.</label>
     </Dominant_Vegetation_Land_Use_Other>
     <Dominant_Vegetation_Height t="radio">
       <opts>
@@ -316,7 +316,7 @@
       </opts>
     </Dominant_Vegetation_Height>
     <Surface_Visibility t="radio" f="notnull">
-      Surface Visibility (%)
+      <label>Surface Visibility (%)</label>
       <opts>
         <opt>0%</opt>
         <opt>10%</opt>
@@ -387,14 +387,14 @@
   </Field_Conditions>
   <Revisit_Unit>
     <Revisit_Unit t="radio" f="notnull">
-      Revisit?
+      <label>Revisit?</label>
       <opts>
         <opt>Yes</opt>
         <opt>No</opt>
       </opts>
     </Revisit_Unit>
     <Revisit_Reason_Unit>
-      If yes, explain briefly.
+      <label>If yes, explain briefly.</label>
     </Revisit_Reason_Unit>
     <cols>
       <EndTimestamp/>
@@ -424,36 +424,36 @@
 </Row>
 
 <logic>
-  addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");
-  addOnEvent("Transect/Revisit/EndTimestampTrigger", "click", "setEndTimestamp()");
+  <label>addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");</label>
+  <label>addOnEvent("Transect/Revisit/EndTimestampTrigger", "click", "setEndTimestamp()");</label>
   
-  addOnEvent("Unit/General_Information/StartTimestampTrigger", "click", "setStartTimestamp_Unit()");
-  addOnEvent("Unit/Revisit_Unit/EndTimestampTrigger", "click", "setEndTimestamp_Unit()");
+  <label>addOnEvent("Unit/General_Information/StartTimestampTrigger", "click", "setStartTimestamp_Unit()");</label>
+  <label>addOnEvent("Unit/Revisit_Unit/EndTimestampTrigger", "click", "setEndTimestamp_Unit()");</label>
 
 
 setTimestamp(String path) {
-  setFieldValue(path, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z").format(new Date()));
+  <label>setFieldValue(path, new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z").format(new Date()));</label>
 }
 
 // Linked using @POSTPROC
 setStartTimestamp() {
-  String ref = "Transect/General_Information/StartTimestamp";
-  setTimestamp(ref);
+  <label>String ref = "Transect/General_Information/StartTimestamp";</label>
+  <label>setTimestamp(ref);</label>
 }
 
 setEndTimestamp() {
-  String ref = "Transect/Revisit/EndTimestamp";
-  setTimestamp(ref);
+  <label>String ref = "Transect/Revisit/EndTimestamp";</label>
+  <label>setTimestamp(ref);</label>
 }
 
 setStartTimestamp_Unit() {
-  String ref = "Unit/General_Information/StartTimestamp";
-  setTimestamp(ref);
+  <label>String ref = "Unit/General_Information/StartTimestamp";</label>
+  <label>setTimestamp(ref);</label>
 }
 
 setEndTimestamp_Unit() {
-  String ref = "Unit/Revisit_Unit/EndTimestamp";
-  setTimestamp(ref);
+  <label>String ref = "Unit/Revisit_Unit/EndTimestamp";</label>
+  <label>setTimestamp(ref);</label>
 }
 
 addOnEvent("Transect/General_Information", "show", "populateRecent()");
@@ -462,49 +462,49 @@ addOnEvent("Control/Main/RecentEntities"   , "click" , "loadEntity();");
 
 populateRecent(){
 
-  String tabgroup = "Control";
-  String refEntityList  = tabgroup + "/Main/RecentEntities";
+  <label>String tabgroup = "Control";</label>
+  <label>String refEntityList  = tabgroup + "/Main/RecentEntities";</label>
 
 
-  String searchQuery = "SELECT uuid, response "+
+  <label>String searchQuery = "SELECT uuid, response "+</label>
                        "  FROM latestNonDeletedArchEntFormattedIdentifiers join createdmodifiedatby using (uuid) "+                       
                        " ORDER BY modifiedat desc, response "+
                        " LIMIT ? "+
                        "OFFSET ? ";
 
-  populateCursorList(refEntityList, searchQuery, 5);
-  refreshTabgroupCSS(tabgroup);
+  <label>populateCursorList(refEntityList, searchQuery, 5);</label>
+  <label>refreshTabgroupCSS(tabgroup);</label>
 
 
 
-  Log.d("Module", "Search query: " + searchQuery);
+  <label>Log.d("Module", "Search query: " + searchQuery);</label>
 
 }
 
 
 newUnit(){
-  String tabgroup = "Unit";
+  <label>String tabgroup = "Unit";</label>
 
-  String autoNumSource = "";
-  autoNumSource = getFieldValue("Control/Identifiers/Next_Unit_ID");
-  if (isNull(autoNumSource)) {
-    showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");
-    return;
+  <label>String autoNumSource = "";</label>
+  <label>autoNumSource = getFieldValue("Control/Identifiers/Next_Unit_ID");</label>
+  <label>if (isNull(autoNumSource)) {</label>
+    <label>showWarning("{Alert}","{A_next_ID_has_not_been_entered_please_provide_one}");</label>
+    <label>return;</label>
   }
 
                 
               
 
-  setUuid(tabgroup, null);
-  newTabGroup(tabgroup);
-  populateAuthorAndTimestamp(tabgroup);
-  String autoNumDest = "";
-  autoNumDest = "Unit/General_Information/Unit_ID";
-  incAutoNum(autoNumDest);
+  <label>setUuid(tabgroup, null);</label>
+  <label>newTabGroup(tabgroup);</label>
+  <label>populateAuthorAndTimestamp(tabgroup);</label>
+  <label>String autoNumDest = "";</label>
+  <label>autoNumDest = "Unit/General_Information/Unit_ID";</label>
+  <label>incAutoNum(autoNumDest);</label>
 
 
-  setFieldValue("Unit/General_Information/Parent_Transect_ID", getFieldValue("Transect/General_Information/Transect_ID"));
-  setFieldValue("Unit/General_Information/Parent_Planet_Name", getFieldValue("Transect/General_Information/Planet_Name"));
+  <label>setFieldValue("Unit/General_Information/Parent_Transect_ID", getFieldValue("Transect/General_Information/Transect_ID"));</label>
+  <label>setFieldValue("Unit/General_Information/Parent_Planet_Name", getFieldValue("Transect/General_Information/Planet_Name"));</label>
   
 }
 
