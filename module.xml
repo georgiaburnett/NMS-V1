@@ -1,0 +1,310 @@
+<?xml version="1.0" ?>
+<module>
+
+<User f="nodata">
+  <User>
+    <Select_User t="dropdown" f="user"/>
+    <!-- FIGURE OUT USERS? -->
+    <Login t="button" l="Control"/>
+  </User>
+</User>
+
+<Control f="nodata">
+  <Main>
+    <New_Transect t="button" l="Transect"/>
+    <autonum/>
+    <!-- GET RID OF NEXT IDS? -->
+  </Main>
+  <search>
+    Records
+    <!-- DISPLAY (RECENT?) RECORDS AS TRANSECT [ID]-UNIT [ID]-PLANET NAME -->
+  </search>
+</Control>
+
+<Transect>
+  <General_Information>
+    <!-- PUT START TRANSECT TIMESTAMP HERE-->
+    <!-- PUT END TRANSECT TIMESTAMP HERE -->
+    <Transect_ID f="id autonum notnull"/>
+    <Planet_Name f="notnull"/>
+    <author>
+      Surveyor
+    </author>
+    <Geotag f="notnull">
+      <desc>This will be updated as we figure out how NMS uses co-ordinates, location, etc. Stay tuned!</desc>
+    </Geotag>
+    <Number_Of_Orbits b="decimal"/>
+    <Survey_Method t="dropdown" f="notnull">
+      <opts>
+        <opt>Orbital</opt>
+        <opt>Suborbital</opt>
+      </opts>
+    </Survey_Method>
+    <Predominant_Surface_Type t="dropdown" f="notnull">
+      <opts>
+        <opt>Land</opt>
+        <opt>Water</opt>
+      </opts>
+    </Predominant_Surface_Type>
+    <Number_of_Features b="decimal">
+      <desc></desc>
+    </Number_of_Features>
+    <Location_and_description>
+      <desc>This could include access, relation to other planets/transects/systems, land use etc.</desc>
+    </Location_and_description>
+  </General_Information>
+  <Survey_Procedure>
+    <Area_Surveyed b="decimal">
+      Area Surveyed (sq. km.)
+    </Area_Surveyed>
+    <Bearing b="decimal">
+      Bearing (degrees)
+    </Bearing>
+    <!-- DIRECTION OF SURVEYOR -->
+    <!-- GRID TABLE FOR FEATURES -->
+    <Comment_on_transect>
+      <desc>Comments about the transect including identifying "other" macro-artefacts, built environments, glitches, explanation of field procedures, etc.</desc>
+    </Comment_on_transect>
+    <Video_Capture_URL f="notnull" />
+    <Screengrab_Filename>
+      <desc>Make a note of the filename you named your screenshot here for future reference.</desc>
+    </Screengrab_Filename>
+    <Attach_a_Screengrab t="file">
+      <desc>Attach a screengrab using this feature. Can be uploaded from you device - locally via cloud software like Dropbox - or post fact.</desc>
+    </Attach_a_Screengrab>
+  </Survey_Procedure>
+  <Planetary_Coverage>
+    <Dominant_Planet_Coverage t="checkbox">
+      <desc>Check as many as apply.</desc>
+      <opts>
+        <opt>Ocean</opt>
+        <opt>Forest</opt>
+        <opt>Mountain</opt>
+        <opt>Desert</opt> 
+        <opt>Artic</opt>
+        <opt>Plains</opt>
+        <opt>Gas</opt> 
+        <opt>Industrial</opt> 
+        <opt>Inhabited</opt>
+        <opt>Unhabited</opt> 
+        <opt>Once inhabited</opt>
+        <opt>Fauna</opt>
+        <opt>Flora</opt>
+        <opt>Sentient life</opt> 
+        <opt>Other life</opt> 
+        <opt>Peaceful?</opt> 
+        <opt>Hostile?</opt>
+        <opt>Other</opt>
+      </opts>
+    </Dominant_Planet_Coverage>
+    <Dominant_Planet_Coverage_Other>
+      If dominant planet coverage is 'other', please explain.
+    </Dominant_Planet_Coverage_Other>
+    <Percentage_of_Visable_Surface b="decimal">
+      <desc>Percentage of surface visiable from orbiting altitude.</desc>
+    </Percentage_of_Visable_Surface>
+    <Comment_on_planetary_coverage>
+      <desc>Any comments on planetary coverage.</desc>
+    </Comment_on_planetary_coverage>
+  </Planetary_Coverage>
+  <Surface_Conditions>
+    <Comment_on_surface_conditions>
+      <desc>Comments on surface conditions, glitches or unintended game behaviour, etc.</desc>
+    </Comment_on_surface_conditions>
+    <Features>
+      <desc></desc>
+    </Features>
+  </Surface_Conditions>
+  <Revisit>
+    <Revisit t="radio" f="notnull">
+      Revisit?
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+      </opts>
+    </Revisit>
+    <Revisit_Reason>
+      If yes, explain briefly.
+    </Revisit_Reason>
+    <!-- PUT END TRANSECT TIMESTAMP HERE? -->
+  </Revisit>
+  <Unit>
+    <New_Unit t="button" l="Unit"/>
+    <autonum/>
+  </Unit>
+</Transect>
+
+<Unit>
+  <General_Information>
+    <Unit_ID f="id autonum notnull"/>
+    <!-- PUT START UNIT TIMESTAMP HERE-->
+    <!-- PUT END UNIT TIMESTAMP HERE? -->
+    <!-- DISPLAY TRANSECT ID -->
+    <!-- DISPLAY PLANET NAME -->
+    <author>
+      Surveyor
+    </author>
+    <Geotag_Unit f="notnull">
+      Geotag
+      <desc>This will be updated as we figure out how NMS uses co-ordinates, location, etc. Stay tuned!</desc>
+    </Geotag_Unit>
+    <Survey_Procedure_Unit t="dropdown">
+      <opts>
+        <opt>Standard</opt>
+        <opt>Grab</opt>
+      </opts>
+    </Survey_Procedure_Unit>
+    <Survey_State_Unit t="dropdown" f="notnull">
+      Is the area...
+      <opts>
+        <opt>Unsurveyed</opt>
+        <opt>Resurveyed</opt>
+      </opts>
+    </Survey_State_Unit>
+    <Number_of_Items_Unit b="decimal">
+      Number of Items
+    </Number_of_Items_Unit>
+    <Location_and_description_Unit>
+      Location and description
+      <desc>This could include access, relation to other units, land use etc.</desc>
+    </Location_and_description_Unit>
+  </General_Information>
+  <Survey_Procedure>
+    <Area_Surveyed_Unit b="decimal">
+      Area Surveyed (sq. km.)
+    </Area_Surveyed_Unit>
+    <Bearing_Unit b="decimal">
+      Bearing (degrees)
+    </Bearing_Unit>
+    <!-- DIRECTION OF SURVEYOR -->
+    <!-- GRID TABLE FOR COUNT -->
+    <Comment_on_unit>
+      <desc>Comments about the unit including identifying "other" artefacts, glitches, explanation of field procedures, etc.</desc>
+    </Comment_on_unit>
+    <Video_Capture_URL f="notnull" />
+    <Screengrab_Filename>
+      <desc>Make a note of the filename you named your screenshot here for future reference.</desc>
+    </Screengrab_Filename>
+    <Attach_a_Screengrab t="file">
+      <desc>Attach a screengrab using this feature. Can be uploaded from you device - locally via cloud software like Dropbox - or post fact.</desc>
+    </Attach_a_Screengrab>
+  </Survey_Procedure>
+  <Vegetation_and_Land_Use>
+    <Dominant_Vegetation_Land_Use t="checkbox">
+      Dominant vegetation and land use:
+      <desc>Check all that apply.</desc>
+      <opts>
+        <opt>Coniferous</opt>
+        <opt>Deciduous</opt> 
+        <opt>Barren</opt>
+        <opt>Garden</opt> 
+        <opt>Weeds</opt>
+        <opt>Cultivated</opt> 
+        <opt>Formed</opt>
+        <opt>Other</opt>
+      </opts>
+    </Dominant_Vegetation_Land_Use>
+    <Dominant_Vegetation_Land_Use_Other>
+      If vegetation or land use is 'other', please explain.
+    </Dominant_Vegetation_Land_Use_Other>
+    <Dominant_Vegetation_Height t="radio">
+      <opts>
+        <opt>None</opt>
+        <opt>Ankle</opt> 
+        <opt>Knee</opt> 
+        <opt>Waist</opt>
+        <opt>Head</opt> 
+        <opt>Over-head</opt>
+      </opts>
+    </Dominant_Vegetation_Height>
+    <Surface_Visibility t="radio" f="notnull">
+      Surface Visibility (%)
+      <opts>
+        <opt>0%</opt>
+        <opt>10%</opt>
+        <opt>20%</opt>
+        <opt>30%</opt>
+        <opt>40%</opt>
+        <opt>50%</opt>
+        <opt>60%</opt>
+        <opt>70%</opt>
+        <opt>80%</opt>
+        <opt>90%</opt>
+        <opt>100%</opt>
+      </opts>
+    </Surface_Visibility>
+    <Comment_on_vegetation_and_land_use>
+      <desc>Comment on vegetation and land use.</desc>
+    </Comment_on_vegetation_and_land_use>
+  </Vegetation_and_Land_Use>
+  <Field_Conditions>
+    <Soil_Condition t="radio">
+      <opts>
+        <opt>Plowed, loose soil</opt>
+        <opt>Plowed, soil compacted</opt> 
+        <opt>Unplowed, loose soil</opt> 
+        <opt>Unplowed, soil compacted</opt>
+      </opts>
+    </Soil_Condition>
+    <Background_Disturbance t="radio">
+      <opts>
+        <opt>None</opt>
+        <opt>Light</opt>
+        <opt>Moderate</opt>
+        <opt>Heavy</opt>
+      </opts>
+    </Background_Disturbance>
+    <Sherd_Crusting t="radio">
+      <opts>
+        <opt>None</opt>
+        <opt>Light</opt>
+        <opt>Heavy</opt>
+        <opt>No sherds</opt>
+      </opts>
+    </Sherd_Crusting>
+    <Dominant_Surface_Clast_Size t="radio">
+      <opts>
+        <opt>Boulder (greater than 300mm)</opt>
+        <opt>Cobble (300-75mm)</opt>
+        <opt>Coarse gravel (75-19mm)</opt>
+        <opt>Fine gravel (19-5mm)</opt>
+        <opt>Sand (less than 5mm)</opt>
+      </opts>
+    </Dominant_Surface_Clast_Size>
+    <Clast_Shape t="radio">
+      <opts>
+        <opt>Angular</opt>
+        <opt>Semi-rounded</opt>
+        <opt>Rounded</opt>
+      </opts>
+    </Clast_Shape>
+    <Soil_Tint/>
+    <Soil_Hue/>
+    <Comment_on_field_conditions>
+      <desc>Comment on field conditions.</desc>
+    </Comment_on_field_conditions>
+    <Features_Unit>
+      <desc></desc>
+    </Features_Unit>
+  </Field_Conditions>
+  <Revisit_Unit>
+    <Revisit_Unit t="radio" f="notnull">
+      Revisit?
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+      </opts>
+    </Revisit_Unit>
+    <Revisit_Reason_Unit>
+      If yes, explain briefly.
+    </Revisit_Reason_Unit>
+    <!-- PUT END UNIT TIMESTAMP HERE? -->
+    <Finish_Unit t="button" l="Control"/>
+  </Revisit_Unit>
+</Unit>
+
+</module>
+
+
+
+
