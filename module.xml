@@ -78,26 +78,25 @@
       Bearing (degrees)
     </Bearing>
     <cols>
-      <FromDir t="dropdown">
+      <From_Direction t="dropdown">
         <opts>
           <opt>E</opt>
           <opt>N</opt>
           <opt>S</opt>
           <opt>W</opt>
         </opts>
-      </FromDir>
-      <ToDir t="dropdown">
+      </From_Direction>
+      <To_Direction t="dropdown">
         <opts>
           <opt>E</opt>
           <opt>N</opt>
           <opt>S</opt>
           <opt>W</opt>
         </opts>
-      </ToDir>      
+      </To_Direction>      
     </cols>
-
-    <!-- DIRECTION OF SURVEYOR -->
-    <!-- GRID TABLE FOR FEATURES -->
+    <New_Orbit t="Button" lc="Orbit"/>
+    <Orbit_List t="list" ec="Orbit" />
     <Comment_on_transect>
       <desc>Comments about the transect including identifying "other" macro-artefacts, built environments, glitches, explanation of field procedures, etc.</desc>
     </Comment_on_transect>
@@ -109,10 +108,6 @@
       <desc>Attach a screengrab using this feature. Can be uploaded from you device - locally via cloud software like Dropbox - or post fact.</desc>
     </Attach_a_Screengrab>
   </Survey_Procedure>
-  <OrbitalCoverage>
-    <NewOrbit t="Button" lc="Orbit"/>
-    <OrbitList t="list" ec="Orbit" />
-  </OrbitalCoverage>
   <Planetary_Coverage>
     <Dominant_Planet_Coverage t="checkbox">
       <desc>Check as many as apply.</desc>
@@ -175,18 +170,23 @@
   <Unit>
     <New_Unit t="button" l="Unit"/>
     <autonum/>
+    <Unit_List t="list" ec="Unit" />
   </Unit>
 </Transect>
+
 <Orbit>
-  <OrbitNumber t="radio" f="id">
-    <opts>
-      <opt>1</opt>
-      <opt>2</opt>
-      <opt>3</opt>
-      <opt>4</opt>
-      <opt>5</opt>
-    </opts>
-  </OrbitNumber>
+  <Orbit_Number b="decimal" f="id"/>
+  <Agriculture />
+  <Architecture />
+  <Communications />
+  <Cultural />
+  <Industry />
+  <Military />
+  <Mining />
+  <Transport />
+  <Settlement />
+  <Other />
+</Orbit>
 
 <Unit>
   <General_Information>
@@ -232,6 +232,26 @@
     </Bearing_Unit>
     <!-- DIRECTION OF SURVEYOR -->
     <!-- GRID TABLE FOR COUNT -->
+    <cols>
+      <From_Direction t="dropdown">
+        <opts>
+          <opt>E</opt>
+          <opt>N</opt>
+          <opt>S</opt>
+          <opt>W</opt>
+        </opts>
+      </FromDir>
+      <To_Direction t="dropdown">
+        <opts>
+          <opt>E</opt>
+          <opt>N</opt>
+          <opt>S</opt>
+          <opt>W</opt>
+        </opts>
+      </ToDir>      
+    </cols>
+    <New_Survey_Row t="Button" lc="Row"/>
+    <Row_List t="list" ec="Row" />
     <Comment_on_unit>
       <desc>Comments about the unit including identifying "other" artefacts, glitches, explanation of field procedures, etc.</desc>
     </Comment_on_unit>
@@ -356,6 +376,19 @@
     <Finish_Unit t="button" l="Control"/>
   </Revisit_Unit>
 </Unit>
+
+<Row>
+  <Row_Number b="decimal" f="id"/>
+  <Metal />
+  <Sherd />
+  <Lithic />
+  <Technology />
+  <Structure />
+  <Wreck />
+  <Monolith />
+  <Settlement />
+  <Other />
+</Row>
 
 <logic>
   addOnEvent("Transect/General_Information/StartTimestampTrigger", "click", "setStartTimestamp()");
