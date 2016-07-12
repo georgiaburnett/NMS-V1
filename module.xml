@@ -166,7 +166,7 @@
     </cols>
   </Revisit>
   <Unit>
-    <New_Unit t="button" l="Unit"/>
+    <New_Unit t="button" lc="Unit"/>
     <autonum/>
     <Unit_List t="list" ec="Unit" />
   </Unit>
@@ -195,13 +195,13 @@
       <StartTimestamp/>
       <StartTimestampTrigger t="button"/>
     </cols>
-    <!-- DISPLAY TRANSECT ID -->
-    <!-- DISPLAY PLANET NAME -->
+    <Parent_Transect_ID/>
+    <Parent_Planet_Name/>
     <author>
       Surveyor
     </author>
     <Geotag_Unit f="notnull">
-      Geotag
+      <label>Geotag</label>
       <desc>This will be updated as we figure out how NMS uses co-ordinates, location, etc. Stay tuned!</desc>
     </Geotag_Unit>
     <Survey_Procedure_Unit t="dropdown">
@@ -450,6 +450,10 @@ setEndTimestamp_Unit() {
   populateCursorList(refEntityList, searchQuery, 25);
   refreshTabgroupCSS(tabgroup);
   }
+
+
+
+
 </logic>
 
 </module>
